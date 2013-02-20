@@ -6,9 +6,10 @@ module Invoicexpress
 
       # Returns all your clients
       #
-      # @param options.per_page [Integer] You can specify how many results you want to fetch
-      # @param options.page [Integer] You can ask a specific page of clients
-      # @return [Array of Invoicexpress::Model::Client] An array with all your clients
+      # @option options [Integer] per_page (30) You can specify how many results you want to fetch
+      # @option options [Integer] page (1) You can ask a specific page of clients
+      #
+      # @return [Array<Invoicexpress::Models::Client>] An array with all your clients
       def clients(options={})
         params = { :per_page => 30, :page => 1, :klass => Invoicexpress::Models::Client }
 
@@ -35,7 +36,7 @@ module Invoicexpress
       # Returns a specific client
       #
       # @param client_id [String] The client's ID
-      # @return [Invoicexpress::models::Client] The remote client from the server
+      # @return [Invoicexpress::Models::Client] The remote client from the server
       def client(client_id, options={})
         params = { :klass => Invoicexpress::Models::Client }
 
