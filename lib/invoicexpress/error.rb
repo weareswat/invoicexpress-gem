@@ -51,6 +51,9 @@ module Invoicexpress
     end
   end
 
+  # Raised when Invoicexpress returns a 401 HTTP status code
+  class Unauthorized < Error; end
+
   # Raised when Invoicexpress returns a 422 HTTP status code
   class UnprocessableEntity < Error; end
 end

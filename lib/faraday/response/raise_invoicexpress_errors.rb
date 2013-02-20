@@ -4,7 +4,8 @@ require 'faraday'
 module Faraday
   class Response::RaiseInvoicexpressErrors < Response::Middleware
     ERROR_MAP = {
-      422 => Invoicexpress::UnprocessableEntity
+      401 => Invoicexpress::Unauthorized,
+      422 => Invoicexpress::UnprocessableEntity,
     }
 
     def on_complete(env)
