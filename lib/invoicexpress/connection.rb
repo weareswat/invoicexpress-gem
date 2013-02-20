@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'faraday/response/parse_xml'
 
 module Invoicexpress
   # @private
@@ -6,10 +7,11 @@ module Invoicexpress
     private
 
     def connection(options={})
+      klass = options.delete(:klass)
+
       options = {
-        :force_urlencoded => false,
-        :raw              => false,
-        :ssl              => { :verify => false }
+        :raw => false,
+        :ssl => { :verify => false }
       }.merge(options)
 
       if !proxy.nil?
@@ -19,15 +21,10 @@ module Invoicexpress
       options.merge!(:params => authentication)
 
       connection = Faraday.new(options) do |builder|
-        if options[:force_urlencoded]
-          builder.request :url_encoded
-        else
-          builder.request :json
-        end
+        builder.request :url_encoded
 
         builder.use FaradayMiddleware::FollowRedirects
-        builder.use FaradayMiddleware::Mashify
-        builder.use FaradayMiddleware::ParseJson, :content_type => /\bjson$/
+        builder.use Faraday::Response::ParseXML, klass
 
         faraday_config_block.call(builder) if faraday_config_block
         builder.adapter *adapter

@@ -10,9 +10,9 @@ describe Invoicexpress::Client do
       Invoicexpress.reset
     end
 
-    it "defauls to https://%.invoicexpress.net" do
+    it "defauls to https://%s.invoicexpress.net" do
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://%.invoicexpress.net/"
+      client.api_endpoint.should == "https://%s.invoicexpress.net/"
     end
 
     it "is set" do

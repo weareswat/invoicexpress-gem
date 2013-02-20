@@ -1,4 +1,3 @@
-require 'netrc'
 require 'invoicexpress/configuration'
 require 'invoicexpress/client'
 

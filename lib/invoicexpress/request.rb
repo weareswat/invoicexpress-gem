@@ -1,7 +1,6 @@
-require 'multi_json'
-
 module Invoicexpress
   module Request
+
     def delete(path, options={})
       request(:delete, path, options).body
     end
@@ -34,31 +33,27 @@ module Invoicexpress
     end
 
     def request(method, path, options={})
-      token = options.delete(:api_token) || api_token
-
-      force_urlencoded = options.delete(:force_urlencoded) || false
-      url = options.delete(:endpoint) || (api_endpoint % screen_name)
+      token = options.delete(:api_key)  || api_key
+      url   = options.delete(:endpoint) || (api_endpoint % screen_name)
+      klass = options.delete(:klass) || raise(ArgumentError, "Need a HappyMapper class to parse")
 
       conn_options = {
-        :force_urlencoded => force_urlencoded,
-        :url              => url
+        :url   => url,
+        :klass => klass
       }
 
       response = connection(conn_options).send(method) do |request|
-        request.headers['Accept'] = options.delete(:accept) || 'application/json'
+        request.headers['Accept'] = options.delete(:accept) || 'application/xml'
 
         case method
         when :get, :delete, :head
           request.url(path, options)
         when :patch, :post, :put
-          request.path = path
-          if force_urlencoded
-            request.body = options unless options.empty?
-          else
-            request.body = MultiJson.dump(options) unless options.empty?
-          end
-        end
+          request.headers['Content-Type'] = "application/xml; charset=utf-8"
 
+          request.path = path
+          request.body = options[:body].to_xml unless options.empty?
+        end
       end
 
       response

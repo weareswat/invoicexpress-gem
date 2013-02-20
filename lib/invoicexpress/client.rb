@@ -2,6 +2,10 @@ require 'invoicexpress/authentication'
 require 'invoicexpress/connection'
 require 'invoicexpress/request'
 
+require 'invoicexpress/models'
+
+require 'invoicexpress/client/clients'
+
 module Invoicexpress
   class Client
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
@@ -16,5 +20,7 @@ module Invoicexpress
     include Invoicexpress::Authentication
     include Invoicexpress::Connection
     include Invoicexpress::Request
+
+    include Invoicexpress::Client::Clients
   end
 end
