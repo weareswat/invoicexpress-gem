@@ -12,8 +12,6 @@ module Faraday
     
     def on_complete(env)
       env[:body] = @klass.parse env[:body]
-
-      super
     end
 
   end

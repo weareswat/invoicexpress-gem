@@ -1,4 +1,5 @@
 require 'invoicexpress/configuration'
+require 'invoicexpress/error'
 require 'invoicexpress/client'
 
 module Invoicexpress

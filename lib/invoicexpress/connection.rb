@@ -1,5 +1,6 @@
 require 'faraday_middleware'
 require 'faraday/response/parse_xml'
+require 'faraday/response/raise_invoicexpress_errors'
 
 module Invoicexpress
   # @private
@@ -25,6 +26,7 @@ module Invoicexpress
 
         builder.use FaradayMiddleware::FollowRedirects
         builder.use Faraday::Response::ParseXML, klass
+        builder.use Faraday::Response::RaiseInvoicexpressErrors
 
         faraday_config_block.call(builder) if faraday_config_block
         builder.adapter *adapter
