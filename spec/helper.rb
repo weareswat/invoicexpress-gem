@@ -18,6 +18,10 @@ def stub_post(url)
   stub_request(:post, invoicexpress_url(url))
 end
 
+def stub_put(url)
+  stub_request(:put, invoicexpress_url(url))
+end
+
 def fixture_path
   File.expand_path("../fixtures", __FILE__)
 end

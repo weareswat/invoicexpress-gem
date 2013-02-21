@@ -3,6 +3,7 @@ module Invoicexpress
     class Client
       include HappyMapper
 
+      element :id, Integer
       element :name, String
       element :code, Integer
       element :email, String

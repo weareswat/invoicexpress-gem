@@ -41,12 +41,35 @@ describe Invoicexpress::Client::Clients do
 
     it "raises if the client has no name" do
       expect {
-        @client.create_client(Invoicexpress::Models::Client.new())
+        @client.create_client(Invoicexpress::Models::Client.new)
       }.to raise_error(ArgumentError)
     end
   end
 
-  describe ".get" do
+  describe ".update_client" do
+    it "updates the client" do
+      stub_put("/clients/123.xml").
+        to_return(xml_response("clients.update.xml"))
+
+      model = Invoicexpress::Models::Client.new(:id => 123)
+
+      expect { @client.update_client(model) }.to_not raise_error
+    end
+
+    it "raises if no client is passed" do
+      expect {
+        @client.update_client(nil)
+      }.to raise_error(ArgumentError)
+    end
+
+    it "raises if the client to update has no id" do
+      expect {
+        @client.update_client(Invoicexpress::Models::Client.new)
+      }.to raise_error(ArgumentError)
+    end
+  end
+
+  describe ".client" do
     it "gets a client" do
       stub_get("/clients/1.xml").
         to_return(xml_response("clients.get.xml"))

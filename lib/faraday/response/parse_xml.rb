@@ -1,4 +1,5 @@
 require 'faraday'
+require 'pry'
 
 # @api private
 module Faraday
@@ -11,7 +12,11 @@ module Faraday
     end
     
     def on_complete(env)
-      env[:body] = @klass.parse env[:body]
+      if env[:body] and !env[:body].strip.empty?
+        env[:body] = @klass.parse env[:body]
+      else
+        env[:body] = nil
+      end
     end
 
   end
