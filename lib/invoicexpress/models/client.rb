@@ -1,6 +1,6 @@
 module Invoicexpress
   module Models
-    class Client
+    class Client < BaseModel
       include HappyMapper
 
       element :id, Integer
@@ -15,12 +15,6 @@ module Invoicexpress
       element :fax, String
       element :observations, String
       element :send_options, Integer
-
-      def initialize(attributes = {})
-        super()
-
-        attributes.each { |k,v| self.send("#{k}=", v) }
-      end
     end
   end
 end

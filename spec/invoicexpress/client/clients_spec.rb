@@ -80,4 +80,29 @@ describe Invoicexpress::Client::Clients do
     end
   end
 
+  describe ".client_invoices" do
+    it "gets the client's invoices" do
+      stub_post("/clients/1/invoices.xml").
+        to_return(xml_response("clients.invoices.xml"))
+
+      invoices = @client.client_invoices(1)
+      invoices.results.entries.should == 0
+      invoices.results.total_entries == 0
+    end
+
+    it "gets the client's invoices with filters" do
+      filter = Invoicexpress::Models::Filter.new({
+        :status   => [:draft, :final],
+        :by_type  => ["Receipt"],
+        :archived => [:non_archived]
+      })
+
+      stub_post("/clients/1/invoices.xml").
+        to_return(xml_response("clients.invoices.xml"))
+
+      invoices = @client.client_invoices(1, filter)
+      invoices.results.entries.should == 0
+    end
+  end
+
 end
