@@ -11,9 +11,9 @@ module Invoicexpress
       # @return [Array<Invoicexpress::Models::Invoice>] An array with all your invoices
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def invoices(options={})
-        params = { :page => 1, :klass => Invoicexpress::Models::Invoice }
+        params = { :page => 1, :klass => Invoicexpress::Models::Invoices }
 
-        get("invoices.xml", parmas.merge(options))
+        get("invoices.xml", params.merge(options))
       end
 
       # Returns a specific invoice
@@ -98,7 +98,7 @@ module Invoicexpress
       def invoice_email(invoice_id, message, options={})
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
-        params = { :body => message }
+        params = { :body => message, :klass => Invoicexpress::Models::Invoice }
         put("invoices/#{invoice_id}/email-invoice.xml", params.merge(options))
       end
 

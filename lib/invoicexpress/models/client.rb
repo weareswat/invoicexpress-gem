@@ -1,5 +1,6 @@
 module Invoicexpress
   module Models
+
     class Client < BaseModel
       include HappyMapper
 
@@ -16,5 +17,6 @@ module Invoicexpress
       element :observations, String
       element :send_options, Integer
     end
+
   end
 end

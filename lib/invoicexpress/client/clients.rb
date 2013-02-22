@@ -76,14 +76,14 @@ module Invoicexpress
       # @param filter [Invoicexpress::Models::Filter] An optional filter
       # @option options [Integer] per_page (10) You can specify how many results you want to fetch
       # @option options [Integer] page (1) You can ask a specific page of clients
-      # @return [Invoicexpress::Models::Invoices] The invoices result
+      # @return [Invoicexpress::Models::ClientInvoices] The invoices result
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::NotFound When the client ID is not found
       def client_invoices(client_id, filter=Invoicexpress::Models::Filter.new, options={})
         raise(ArgumentError, "filter has the wrong type") unless filter.is_a?(Invoicexpress::Models::Filter)
 
         params = {
-          :klass    => Invoicexpress::Models::Invoices,
+          :klass    => Invoicexpress::Models::ClientInvoices,
           :per_page => 10,
           :page     => 1,
           :body     => filter

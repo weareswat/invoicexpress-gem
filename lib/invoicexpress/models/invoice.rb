@@ -2,6 +2,7 @@ require 'invoicexpress/models/client'
 
 module Invoicexpress
   module Models
+
     class Tax < BaseModel
       include HappyMapper
 
@@ -42,8 +43,8 @@ module Invoicexpress
           element :id, Integer
           element :status, String
           element :sequence_number, String
-          element :date, Date
-          element :due_date, Date
+          element :date, Date, :on_save => DATE_FORMAT 
+          element :due_date, Date, :on_save => DATE_FORMAT
           element :reference, String
           element :observations, String
           element :retention, Float
@@ -96,6 +97,17 @@ module Invoicexpress
     end
 
     class Invoices < BaseModel
+      include HappyMapper
+
+      tag 'invoices'
+      has_many :invoices, Invoice
+      element :current_page, Integer
+      element :total_pages, Integer
+      element :total_entries, Integer
+      element :per_page, Integer
+    end
+
+    class ClientInvoices < BaseModel
       include HappyMapper
 
       tag 'invoices'
