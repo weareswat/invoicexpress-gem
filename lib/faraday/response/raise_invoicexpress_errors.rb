@@ -6,6 +6,7 @@ module Faraday
     ERROR_MAP = {
       401 => Invoicexpress::Unauthorized,
       422 => Invoicexpress::UnprocessableEntity,
+      500 => Invoicexpress::InternalServerError,
     }
 
     def on_complete(env)

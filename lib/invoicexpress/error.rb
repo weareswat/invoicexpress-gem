@@ -25,7 +25,7 @@ module Invoicexpress
     def response_body
       @response_body ||=
         if (body = @response[:body]) && !body.empty?
-          if body.is_a?(String)
+          if body.is_a?(String) and body.start_with?("<")
             Invoicexpress::Models::Errors.parse(body)
           else
             body
@@ -41,8 +41,11 @@ module Invoicexpress
       return nil  if @response.nil?
 
       message = if response_body
-        @messages = response_body.errors
-        ": " + @messages.join(", ")
+        if response_body.respond_to?(:errors)
+          ": " + response_body.errors.join(", ")
+        else
+          ": " + response_body
+        end
       else
         ''
       end
@@ -59,4 +62,7 @@ module Invoicexpress
 
   # Raised when Invoicexpress returns a 422 HTTP status code
   class UnprocessableEntity < Error; end
+
+  # Raised when Invoicexpress server goes dark (500 HTTP status code)
+  class InternalServerError < Error; end
 end
