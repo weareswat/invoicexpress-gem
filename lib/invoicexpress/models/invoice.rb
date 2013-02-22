@@ -36,7 +36,6 @@ module Invoicexpress
 
     module BaseInvoice
       def self.included(base)
-
         base.class_eval do
           include HappyMapper
 
@@ -102,6 +101,33 @@ module Invoicexpress
       tag 'invoices'
       has_one :results, InvoiceResult
       has_many :invoices, Invoice
+    end
+
+    class InvoiceState < BaseModel
+      include HappyMapper
+
+      tag 'invoice'
+      element :state, String
+      element :message, String
+    end
+
+    class MessageClient < BaseModel
+      include HappyMapper
+
+      tag 'client'
+      element :email, String
+      element :save, Integer
+    end
+
+    class Message < BaseModel
+      include HappyMapper
+
+      tag 'message'
+      has_one :client, MessageClient
+      element :cc, String
+      element :bcc, String
+      element :subject, String
+      element :body, String
     end
 
   end

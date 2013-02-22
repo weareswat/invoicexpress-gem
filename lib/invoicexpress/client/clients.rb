@@ -109,7 +109,7 @@ module Invoicexpress
 
       # Use this method to obtain a client by your code. Partial searches are not supported
       #
-      # @param client_name [String] The client's code (your code)
+      # @param client_code [String] The client's code (your code)
       # @return [Invoicexpress::Models::Client] The client
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::NotFound When there are no clients with that name

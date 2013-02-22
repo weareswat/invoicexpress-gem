@@ -5,6 +5,7 @@ require 'invoicexpress/request'
 require 'invoicexpress/models'
 
 require 'invoicexpress/client/clients'
+require 'invoicexpress/client/invoices'
 
 module Invoicexpress
   class Client
@@ -22,5 +23,6 @@ module Invoicexpress
     include Invoicexpress::Request
 
     include Invoicexpress::Client::Clients
+    include Invoicexpress::Client::Invoices
   end
 end
