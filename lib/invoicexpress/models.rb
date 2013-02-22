@@ -17,3 +17,4 @@ end
 require 'invoicexpress/models/client'
 require 'invoicexpress/models/invoice'
 require 'invoicexpress/models/filter'
+require 'invoicexpress/models/sequence'
