@@ -21,7 +21,7 @@ module Invoicexpress
     end
 
     class ChangeAccountTo < BaseModel
-      include HappyMaker
+      include HappyMapper
 
       tag 'change_account_to'
       element :id, String

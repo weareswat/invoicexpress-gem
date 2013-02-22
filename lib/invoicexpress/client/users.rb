@@ -39,7 +39,7 @@ module Invoicexpress
           :id => account_id
         )
 
-        params = { :klass => Invoicexpress::Models::Account, :body => change_account_to }
+        params = { :klass => Invoicexpress::Models::Account, :body => change_account_to }
         put("users/change-account.xml", params.merge(options))
       end
 
