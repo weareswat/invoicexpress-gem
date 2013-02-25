@@ -20,10 +20,10 @@ Sequences - 100%
 Users - 100%
 Invoices - 100%
 Items - 100%
-
+Charts - 10%
 
 Tests
 =============
 
 Client - 100%
-
+Charts - 10%

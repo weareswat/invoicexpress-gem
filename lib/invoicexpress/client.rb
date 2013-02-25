@@ -9,6 +9,7 @@ require 'invoicexpress/client/invoices'
 require 'invoicexpress/client/items'
 require 'invoicexpress/client/sequences'
 require 'invoicexpress/client/users'
+require 'invoicexpress/client/charts'
 
 module Invoicexpress
   class Client
@@ -30,5 +31,6 @@ module Invoicexpress
     include Invoicexpress::Client::Items
     include Invoicexpress::Client::Sequences
     include Invoicexpress::Client::Users
+    include Invoicexpress::Client::Charts
   end
 end

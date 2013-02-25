@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chart>
+  <series>
+    <value xid="0">Sep</value>
+    <value xid="1">Oct</value>
+    <value xid="2">Nov</value>
+    <value xid="3">Dec</value>
+    <value xid="4">Jan</value>
+    <value xid="5">Feb</value>
+  </series>
+  <graphs>
+    <graph gid="invoicing">
+      <value xid="0">0</value>
+      <value xid="1">0</value>
+      <value xid="2">0</value>
+      <value xid="3">0</value>
+      <value xid="4">0</value>
+      <value xid="5">60</value>
+    </graph>
+  </graphs>
+</chart>
