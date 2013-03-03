@@ -112,7 +112,15 @@ module Invoicexpress
 
       tag 'cash_invoices'
       has_one :results, InvoiceResult
-      has_many :invoices, CashInvoice
+      has_many :cash_invoices, CashInvoice
+    end
+
+    class CreditNotes < BaseModel
+      include HappyMapper
+
+      tag 'credit_notes'
+      has_one :results, InvoiceResult
+      has_many :credit_notes, CreditNote
     end
 
     class ClientInvoices < BaseModel

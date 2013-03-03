@@ -7,8 +7,7 @@ module Invoicexpress
       # Returns all your cash invoices
       #
       # @option options [Integer] page (1) You can ask a specific page of invoices
-      #
-      # @return [Array<Invoicexpress::Models::CashInvoice>] An array with all your cash invoices
+      # @return [Invoicexpress::Models::CashInvoices] A structure with results (pagination) and all the cash invoices
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def cash_invoices(options={})
         params = { :page => 1, :klass => Invoicexpress::Models::CashInvoices }
@@ -99,7 +98,7 @@ module Invoicexpress
       def invoice_email(invoice_id, message, options={})
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
-        params = { :body => message, :klass => Invoicexpress::Models::Invoice }
+        params = { :body => message, :klass => Invoicexpress::Models::CashInvoice }
         put("cash_invoices/#{invoice_id}/email-document.xml", params.merge(options))
       end
 
