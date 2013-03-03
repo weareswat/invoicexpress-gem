@@ -107,6 +107,17 @@ module Invoicexpress
       element :per_page, Integer
     end
 
+    class CashInvoices < BaseModel
+      include HappyMapper
+
+      tag 'invoices'
+      has_many :invoices, Invoice
+      element :current_page, Integer
+      element :total_pages, Integer
+      element :total_entries, Integer
+      element :per_page, Integer
+    end
+
     class ClientInvoices < BaseModel
       include HappyMapper
 

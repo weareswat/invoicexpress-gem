@@ -6,6 +6,7 @@ require 'invoicexpress/models'
 
 require 'invoicexpress/client/clients'
 require 'invoicexpress/client/invoices'
+require 'invoicexpress/client/cash_invoices'
 require 'invoicexpress/client/items'
 require 'invoicexpress/client/sequences'
 require 'invoicexpress/client/users'
@@ -28,6 +29,7 @@ module Invoicexpress
 
     include Invoicexpress::Client::Clients
     include Invoicexpress::Client::Invoices
+    include Invoicexpress::Client::CashInvoices
     include Invoicexpress::Client::Items
     include Invoicexpress::Client::Sequences
     include Invoicexpress::Client::Users
