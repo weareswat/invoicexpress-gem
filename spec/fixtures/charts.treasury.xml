@@ -1,0 +1,49 @@
+<chart>
+  <series>
+    <value xid="0">Jan</value>
+    <value xid="1">Fev</value>
+    <value xid="2">Mar</value>
+    <value xid="3">Abr</value>
+    <value xid="4">Mai</value>
+    <value xid="5">Jun</value>
+    <value xid="6">Jul</value>
+  </series>
+  <graphs>
+    <graph title="Recebido" gid="settled_values">
+      <value xid="0">0</value>
+      <value xid="1">0</value>
+      <value xid="2">0</value>
+      <value xid="3">0</value>
+      <value xid="4">0</value>
+      <value xid="5">0</value>
+      <value xid="6">0</value>
+    </graph>
+    <graph title="Dentro Prazo" gid="due_values">
+      <value xid="0">0</value>
+      <value xid="1">0</value>
+      <value xid="2">0</value>
+      <value xid="3">0</value>
+      <value xid="4">0</value>
+      <value xid="5">0</value>
+      <value xid="6">0</value>
+    </graph>
+    <graph title="Vencido" gid="overdue_values">
+      <value xid="0">0</value>
+      <value xid="1">60</value>
+      <value xid="2">0</value>
+      <value xid="3">0</value>
+      <value xid="4">0</value>
+      <value xid="5">0</value>
+      <value xid="6">0</value>
+    </graph>
+    <graph title="Previs&#227;o" gid="forecast_values">
+      <value xid="0">0</value>
+      <value xid="1">60</value>
+      <value xid="2">0</value>
+      <value xid="3">0</value>
+      <value xid="4">0</value>
+      <value xid="5">0</value>
+      <value xid="6">0</value>
+    </graph>
+  </graphs>
+</chart>

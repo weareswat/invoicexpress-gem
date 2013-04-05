@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quarterly-results>
+  <year>2010</year>
+  <currency>&#8364;</currency>
+  <quarter-01>
+    <invoicing>60.0</invoicing>
+    <taxes>0.0</taxes>
+    <ytd></ytd>
+  </quarter-01>
+  <quarter-02>
+    <invoicing>0</invoicing>
+    <taxes>0</taxes>
+    <ytd></ytd>
+  </quarter-02>
+  <quarter-03>
+    <invoicing>0</invoicing>
+    <taxes>0</taxes>
+    <ytd></ytd>
+  </quarter-03>
+  <quarter-04>
+    <invoicing>0</invoicing>
+    <taxes>0</taxes>
+    <ytd></ytd>
+  </quarter-04>
+</quarterly-results>

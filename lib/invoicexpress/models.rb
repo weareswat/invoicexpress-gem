@@ -20,3 +20,8 @@ require 'invoicexpress/models/filter'
 require 'invoicexpress/models/sequence'
 require 'invoicexpress/models/user'
 require 'invoicexpress/models/chart'
+require 'invoicexpress/models/top_client'
+require 'invoicexpress/models/top_debtor'
+require 'invoicexpress/models/quarterly_result'
+
+

@@ -16,6 +16,7 @@ module Invoicexpress
       element :fax, String
       element :observations, String
       element :send_options, Integer
+      element :balance, Float
     end
 
   end
