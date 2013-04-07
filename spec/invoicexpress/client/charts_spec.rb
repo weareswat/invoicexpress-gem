@@ -1,4 +1,5 @@
 require 'helper'
+
 describe Invoicexpress::Client::Charts do
 
   before do
@@ -11,8 +12,8 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.invoicing.xml"))
 
       chart = @client.invoicing_chart
-      chart.series.values.count == 6
-      chart.graphs.first.values.count ==6
+      chart.series.values.count.should == 6
+      chart.graphs.first.values.count.should == 6
     end
   end
 
@@ -23,11 +24,11 @@ describe Invoicexpress::Client::Charts do
 
       chart = @client.treasury_chart
       #all there
-      chart.series.values.count == 6
+      chart.series.values.count.should == 7
       #4 graphs
-      chart.graphs.count==4
+      chart.graphs.count.should ==4
       #count values
-      chart.graphs.first.values.count ==7
+      chart.graphs.first.values.count.should ==7
       
     end
   end
@@ -38,8 +39,8 @@ describe Invoicexpress::Client::Charts do
          to_return(xml_response("charts.top-clients.xml"))
 
        chart = @client.top_clients
-       chart.clients.first.name=="Ruben Fonseca"
-       chart.clients.size==1
+       chart.clients.first.name.should =="Ruben Fonseca"
+       chart.clients.size.should ==1
     end
   end
   
@@ -49,8 +50,8 @@ describe Invoicexpress::Client::Charts do
          to_return(xml_response("charts.top-debtors.xml"))
 
        chart = @client.top_debtors
-       chart.clients.size==1
-       chart.clients.first.name=="Ruben Fonseca"
+       chart.clients.size.should ==1
+       chart.clients.first.name.should =="Ruben Fonseca"
     end
   end
 
@@ -60,8 +61,8 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.quarterly-results.xml"))
 
       list = @client.quarterly_results({:year=>2010})
-      list.quarter01.invoicing==60.0
-      list.year=="2010"
+      list.quarter01.invoicing.should ==60.0
+      list.year.should =="2010"
    end
   end
    
