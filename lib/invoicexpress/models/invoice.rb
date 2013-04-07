@@ -7,8 +7,11 @@ module Invoicexpress
       include HappyMapper
 
       tag 'tax'
+      element :id, Integer
       element :name, String
       element :value, Float
+      element :region, String
+      element :default_tax, Integer
     end
 
     class Item < BaseModel

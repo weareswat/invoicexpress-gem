@@ -11,6 +11,7 @@ require 'invoicexpress/client/items'
 require 'invoicexpress/client/sequences'
 require 'invoicexpress/client/users'
 require 'invoicexpress/client/charts'
+require 'invoicexpress/client/taxes'
 
 module Invoicexpress
   class Client
@@ -34,5 +35,6 @@ module Invoicexpress
     include Invoicexpress::Client::Sequences
     include Invoicexpress::Client::Users
     include Invoicexpress::Client::Charts
+    include Invoicexpress::Client::Taxes
   end
 end
