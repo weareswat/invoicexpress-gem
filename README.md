@@ -20,18 +20,32 @@ Sequences     - 100%
 Users         - 100%
 Invoices      - 100%
 Cash Invoices - 100%
-Credit Notes  - 100%
 Items         - 100%
 Charts        - 100%
-Taxes         - 0%
+Debit Notes   - 50%
+Credit Notes  - 50%
+Taxes         - 100%
 Schedules     - 0%
+Sim. Invoices - 0%
+Purch. Orders - 0%
 
 Tests
 =============
 
-Client - 100%
-Charts - 100%
-
+Client        - 100%
+Sequences     - 0%
+Users         - 0%
+Invoices      - 0%
+Cash Invoices - 0%
+Items         - 0%
+Charts        - 100%
+Debit Notes   - 0%
+Credit Notes  - 0%
+Taxes         - 100%
+Schedules     - 60%
+Sim. Invoices - 0%
+Purch. Orders - 0%
+ 
 Example
 =============
 if using inside the gem folder use:
@@ -41,7 +55,7 @@ require 'invoicexpress'
  
 client = Invoicexpress::Client.new(
   :screen_name => "yourusername",
-  :api_key     => "yourapikey",
+  :api_key     => "yourapikey"
 )
 
 invoices  = client.invoices

@@ -2,7 +2,7 @@ require 'happymapper'
 
 module Invoicexpress
   module Models
-    DATE_FORMAT = Proc.new { |value| value.strftime("%d/%m/%Y") }
+    DATE_FORMAT = Proc.new { |value| value.strftime("%d/%m/%Y") unless value.nil? }
     
     class BaseModel
       def initialize(attributes = {})
@@ -23,5 +23,6 @@ require 'invoicexpress/models/chart'
 require 'invoicexpress/models/top_client'
 require 'invoicexpress/models/top_debtor'
 require 'invoicexpress/models/quarterly_result'
+require 'invoicexpress/models/schedule'
 
 
