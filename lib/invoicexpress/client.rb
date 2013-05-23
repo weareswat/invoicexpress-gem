@@ -13,6 +13,7 @@ require 'invoicexpress/client/users'
 require 'invoicexpress/client/charts'
 require 'invoicexpress/client/taxes'
 require 'invoicexpress/client/schedules'
+require 'invoicexpress/client/purchase_orders'
 
 module Invoicexpress
   class Client

@@ -10,7 +10,7 @@ module Invoicexpress
       element :email, String
       element :address, String
       element :postal_code, String
-      element :fiscal_id, Integer
+      element :fiscal_id, String
       element :website, String
       element :phone, String
       element :fax, String

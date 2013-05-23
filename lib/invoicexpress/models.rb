@@ -24,5 +24,6 @@ require 'invoicexpress/models/top_client'
 require 'invoicexpress/models/top_debtor'
 require 'invoicexpress/models/quarterly_result'
 require 'invoicexpress/models/schedule'
+require 'invoicexpress/models/purchase_order'
 
 
