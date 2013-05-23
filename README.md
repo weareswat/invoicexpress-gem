@@ -1,11 +1,9 @@
 # invoiceXpress
-=============
 
 Gem for invoicexpress API
 Reference: http://en.invoicexpress.com/api/appendix/clients-country-list/
 
 ## Dependencies
-=============
 
 Run bundle, the project should need:
 Happymapper
@@ -13,7 +11,6 @@ Faraday
 And pretzels!
 
 ## Progress
-=============
 
 * Client        - 100%
 * Sequences     - 100%
@@ -30,7 +27,6 @@ And pretzels!
 * Purch. Orders - 90%
 
 ## Tests
-=============
 
 * Client        - 100%
 * Sequences     - 0%
@@ -46,8 +42,8 @@ And pretzels!
 * Sim. Invoices - 0%
 * Purch. Orders - 0%
  
-Example
-=============
+### Example
+
 If using from inside a rails project:
     require 'invoicexpress'
  
@@ -60,8 +56,8 @@ If using from inside a rails project:
     invoice   = client.invoice(1042320)
     chart  = client.treasury_chart
 
-Dev
-==============
+#### Dev
 if using inside the gem folder use:
+
     irb -Ilib -r./lib/invoicexpress
 
