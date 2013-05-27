@@ -14,6 +14,8 @@ require 'invoicexpress/client/charts'
 require 'invoicexpress/client/taxes'
 require 'invoicexpress/client/schedules'
 require 'invoicexpress/client/purchase_orders'
+require 'invoicexpress/client/debit_notes'
+require 'invoicexpress/client/credit_notes'
 
 module Invoicexpress
   class Client

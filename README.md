@@ -19,8 +19,8 @@ And pretzels!
 * Cash Invoices - 100%
 * Items         - 100%
 * Charts        - 100%
-* Debit Notes   - 50%
-* Credit Notes  - 50%
+* Debit Notes   - 90%
+* Credit Notes  - 90%
 * Taxes         - 100%
 * Schedules     - 0%
 * Sim. Invoices - 0%

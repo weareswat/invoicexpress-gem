@@ -13,12 +13,30 @@ module Invoicexpress
       def credit_notes(options={})
         params = { :page => 1, :klass => Invoicexpress::Models::CreditNotes }
 
-        get("cash_invoices.xml", params.merge(options))
+        get("credit_notes.xml", params.merge(options))
       end
 
-      # Returns a specific credit note
+      # Returns all the information about a credit note:
+      # - Basic information (date, status, sequence number)
+      # - Client
+      # - Document items
+      # - Document timeline
+      # Document timeline is composed by:
+      # - Date, time and the user who created it
+      # - Type of the event
+      # The complete list of timeline events is:
+      # - create
+      # - edited
+      # - send_email
+      # - canceled
+      # - deleted
+      # - settled
+      # - second_copy
+      # - archived
+      # - unarchived
+      # - comment
       #
-      # @param credit_note_id [String] Requested redit note id
+      # @param credit_note_id [String] Requested credit note id
       # @return [Invoicexpress::Models::CreditNote] The requested credit note
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::NotFound When the credit_note doesn't exist
