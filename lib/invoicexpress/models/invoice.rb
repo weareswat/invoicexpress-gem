@@ -70,6 +70,11 @@ module Invoicexpress
       end
     end
 
+    class SimplifiedInvoice < BaseModel
+      include BaseInvoice
+      tag 'simplified_invoice'
+    end
+    
     class Invoice < BaseModel
       include BaseInvoice
       tag 'invoice'

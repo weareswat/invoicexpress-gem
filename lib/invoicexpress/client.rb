@@ -16,6 +16,8 @@ require 'invoicexpress/client/schedules'
 require 'invoicexpress/client/purchase_orders'
 require 'invoicexpress/client/debit_notes'
 require 'invoicexpress/client/credit_notes'
+require 'invoicexpress/client/simplified_invoices'
+
 
 module Invoicexpress
   class Client
