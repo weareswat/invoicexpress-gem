@@ -11,7 +11,7 @@ module Invoicexpress
       # @return [Invoicexpress::Models::CreditNotes] A struct with results (pagination) and all the credit notes
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def credit_notes(options={})
-        params = { :page => 1, :klass => Invoicexpress::Models::CreditNotes }
+        params = { :page => 1, :klass => Invoicexpress::Models::CreditNote }
 
         get("credit_notes.xml", params.merge(options))
       end

@@ -43,6 +43,11 @@ module Invoicexpress
     include Invoicexpress::Client::Charts
     include Invoicexpress::Client::Taxes
     include Invoicexpress::Client::Schedules
+
+    include Invoicexpress::Client::PurchaseOrders
+    include Invoicexpress::Client::DebitNotes
+    include Invoicexpress::Client::CreditNotes
+    include Invoicexpress::Client::SimplifiedInvoices
     
   end
 end

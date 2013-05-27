@@ -11,7 +11,7 @@ module Invoicexpress
       # @return [Invoicexpress::Models::DebitNotes] A struct with results (pagination) and all the debit notes
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def debit_notes(options={})
-        params = { :page => 1, :klass => Invoicexpress::Models::DebitNotes }
+        params = { :page => 1, :klass => Invoicexpress::Models::DebitNote }
 
         get("debit_notes.xml", params.merge(options))
       end

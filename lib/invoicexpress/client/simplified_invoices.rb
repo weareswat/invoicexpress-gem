@@ -11,7 +11,7 @@ module Invoicexpress
       # @return [Invoicexpress::Models::SimplifiedInvoices] A struct with results (pagination) and all the simplified invoices
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def simplified_invoices(options={})
-        params = { :page => 1, :klass => Invoicexpress::Models::SimplifiedInvoices }
+        params = { :page => 1, :klass => Invoicexpress::Models::SimplifiedInvoice }
 
         get("simplified_invoices.xml", params.merge(options))
       end

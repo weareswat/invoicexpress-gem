@@ -22,8 +22,8 @@ And pretzels!
 * Debit Notes   - 90%
 * Credit Notes  - 90%
 * Taxes         - 100%
-* Schedules     - 0%
-* Sim. Invoices - 0%
+* Schedules     - 50%
+* Sim. Invoices - 90%
 * Purch. Orders - 90%
 
 ## Tests
