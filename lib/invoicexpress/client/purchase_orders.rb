@@ -20,7 +20,7 @@ module Invoicexpress
       #If item name already exists, the item is updated with the new values.
       #Regarding item taxes, if the tax name is not found, no tax is applyed to that item.
       # 
-      # @param PurchaseOrder [Invoicexpress::Models::PurchaseOrder] The PurchaseOrder to create
+      # @param purchase_order [Invoicexpress::Models::PurchaseOrder] The PurchaseOrder to create
       # @return Invoicexpress::Models::PurchaseOrder The PurchaseOrder
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
@@ -51,7 +51,7 @@ module Invoicexpress
       #Regarding item taxes, if the tax name is not found, no tax is applyed to that item.
       #Be careful when updating the invoice items, any missing items from the original invoice will be deleted.
       #
-      # @param credit_note [Invoicexpress::Models::PurchaseOrder] The Purchase Order to update
+      # @param purchase_order [Invoicexpress::Models::PurchaseOrder] The Purchase Order to update
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
       # @raise Invoicexpress::NotFound When the credit note doesn't exist

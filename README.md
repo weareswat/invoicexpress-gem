@@ -56,8 +56,6 @@ If using from inside a rails project:
     invoice   = client.invoice(1042320)
     chart  = client.treasury_chart
 
-#### Dev
-if using inside the gem folder use:
+### Documentation
 
-    irb -Ilib -r./lib/invoicexpress
-
+We've included docs for all methods. Refer to the client section.

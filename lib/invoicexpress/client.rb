@@ -20,6 +20,9 @@ require 'invoicexpress/client/simplified_invoices'
 
 
 module Invoicexpress
+  # Please refer to each section inside the client for the respective documentation.
+  #
+  #
   class Client
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
 
