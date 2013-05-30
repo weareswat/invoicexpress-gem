@@ -29,16 +29,16 @@ And pretzels!
 ## Tests
 
 * Client        - 100%
-* Sequences     - 0%
-* Users         - 0%
-* Invoices      - 0%
-* Cash Invoices - 0%
+* Sequences     - 100%
+* Users         - 100%
 * Charts        - 100%
-* Debit Notes   - 0%
-* Credit Notes  - 99%
 * Taxes         - 100%
 * Schedules     - 60%
 * Sim. Invoices - 99%
+* Invoices      - 0%
+* Cash Invoices - 0%
+* Debit Notes   - 0%
+* Credit Notes  - 99%
 * Purch. Orders - 0%
  
 ### Example
