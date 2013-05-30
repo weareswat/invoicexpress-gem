@@ -68,4 +68,3 @@ describe Invoicexpress::Client::Taxes do
   end
 
 end
-

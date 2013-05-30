@@ -16,9 +16,9 @@ describe Invoicexpress::Client do
     end
 
     it "is set" do
-      Invoicexpress.api_endpoint = "https://rubenfonseca.invoicexpress.net/"
+      Invoicexpress.api_endpoint = "https://thinkorangeteste.invoicexpress.net/"
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://rubenfonseca.invoicexpress.net/"
+      client.api_endpoint.should == "https://thinkorangeteste.invoicexpress.net/"
     end
   end
 end

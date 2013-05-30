@@ -20,7 +20,7 @@ And pretzels!
 * Items         - 100%
 * Charts        - 100%
 * Debit Notes   - 90%
-* Credit Notes  - 90%
+* Credit Notes  - 99%
 * Taxes         - 100%
 * Schedules     - 50%
 * Sim. Invoices - 90%
@@ -36,7 +36,7 @@ And pretzels!
 * Items         - 0%
 * Charts        - 100%
 * Debit Notes   - 0%
-* Credit Notes  - 0%
+* Credit Notes  - 99%
 * Taxes         - 100%
 * Schedules     - 60%
 * Sim. Invoices - 0%

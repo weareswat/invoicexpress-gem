@@ -72,7 +72,7 @@ module Invoicexpress
       # If item exists it will be updated with the new values
       # Be careful when updating the document items, any missing items from the original document will be deleted.
       #
-      # @param credit_note [Invoicexpress::Models::CreditNote] The cash credit note to update
+      # @param credit_note [Invoicexpress::Models::CreditNote] The credit note to update
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
       # @raise Invoicexpress::NotFound When the credit note doesn't exist
