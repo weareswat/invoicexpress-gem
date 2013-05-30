@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sequence>
+  <id>266500</id>
+  <serie>2099</serie>
+  <current_invoice_number>100</current_invoice_number>
+  <current_credit_note_number>200</current_credit_note_number>
+  <current_debit_note_number>300</current_debit_note_number>
+  <default_sequence>0</default_sequence>
+</sequence>
