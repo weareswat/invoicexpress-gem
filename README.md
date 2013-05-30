@@ -33,13 +33,12 @@ And pretzels!
 * Users         - 0%
 * Invoices      - 0%
 * Cash Invoices - 0%
-* Items         - 0%
 * Charts        - 100%
 * Debit Notes   - 0%
 * Credit Notes  - 99%
 * Taxes         - 100%
 * Schedules     - 60%
-* Sim. Invoices - 0%
+* Sim. Invoices - 99%
 * Purch. Orders - 0%
  
 ### Example
