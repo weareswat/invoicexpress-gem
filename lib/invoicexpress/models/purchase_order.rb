@@ -19,7 +19,9 @@ module Invoicexpress
       element :permalink, String
       has_one :supplier, Supplier
       element :currency, String
-      has_many :items, Item
+      has_many :items, Item, :on_save => Proc.new { |value|
+        Items.new(:items => value)
+      }
       element :sum, Float
       element :discount, Float
       element :before_taxes, Float

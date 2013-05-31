@@ -4,12 +4,13 @@ module Invoicexpress
     module PurchaseOrders
 
       # Returns all your purchase orders.
-      # @option options [Integer] page (1) You can ask a specific page of invoices
+      # @option options [Integer] page (1) You can ask a specific page of PurchaseOrders
       #
       # @return [Array<Invoicexpress::Models::PurchaseOrder>] An array with all the PurchaseOrders
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def purchase_orders(options = {})
-        params = { :klass => Invoicexpress::Models::PurchaseOrder }
+        params = { :page => 1, :klass => Invoicexpress::Models::PurchaseOrder }
+
         get("purchase_orders.xml", params.merge(options))
       end
       
@@ -91,7 +92,7 @@ module Invoicexpress
         put("purchase_orders/#{purchase_order_id}/change-state.xml", params.merge(options))
       end
 
-      # SSends the purchase order by email
+      # Sends the purchase order by email
       #
       # @param purchase_order_id [String] The credit note id to send
       # @param message [Invoicexpress::Models::Message] The message to send
@@ -102,7 +103,7 @@ module Invoicexpress
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
         params = { :body => message, :klass => Invoicexpress::Models::PurchaseOrder }
-        put("purchase_orders/#{credit_note_id}/email-document.xml", params.merge(options))
+        put("purchase_orders/#{purchase_order_id}/email-document.xml", params.merge(options))
       end
 
       private

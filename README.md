@@ -19,12 +19,12 @@ And pretzels!
 * Cash Invoices - 100%
 * Items         - 100%
 * Charts        - 100%
-* Debit Notes   - 90%
+* Debit Notes   - 99%
 * Credit Notes  - 99%
 * Taxes         - 100%
 * Schedules     - 50%
-* Sim. Invoices - 90%
-* Purch. Orders - 90%
+* Sim. Invoices - 99%
+* Purch. Orders - 99%
 
 ## Tests
 
@@ -35,11 +35,8 @@ And pretzels!
 * Taxes         - 100%
 * Schedules     - 60%
 * Sim. Invoices - 99%
-* Invoices      - 0%
-* Cash Invoices - 0%
-* Debit Notes   - 0%
-* Credit Notes  - 99%
-* Purch. Orders - 0%
+* Credit Notes  - 100%
+* Purch. Orders - 100%
  
 ### Example
 

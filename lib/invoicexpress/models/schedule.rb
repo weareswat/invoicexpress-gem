@@ -26,7 +26,9 @@ module Invoicexpress
       element :retention, Float
       has_one :client, Client
       element :currency, String
-      has_many :items, Item
+      has_many :items, Item, :on_save => Proc.new { |value|
+        Items.new(:items => value)
+      }
       element :sum, Float
       element :discount, Float
       element :before_taxes, Float
