@@ -59,7 +59,7 @@ module Invoicexpress
       def update_schedule(schedule, options={})
         raise(ArgumentError, "schedule has the wrong type") unless schedule.is_a?(Invoicexpress::Models::Schedule)
 
-        params = { :klass => Invoicexpress::Models::Schedule, :body  => schedule }
+        params = { :klass => Invoicexpress::Models::Schedule, :body  => schedule.to_core_schedule() }
         put("schedules/#{schedule.id}.xml", params.merge(options))
       end
       

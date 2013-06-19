@@ -15,8 +15,8 @@ And pretzels!
 * Client        - 100%
 * Sequences     - 100%
 * Users         - 100%
-* Invoices      - 100%
-* Cash Invoices - 100%
+* Invoices      - 99%
+* Cash Invoices - 99%
 * Items         - 100%
 * Charts        - 100%
 * Debit Notes   - 99%
@@ -24,7 +24,7 @@ And pretzels!
 * Taxes         - 100%
 * Schedules     - 50%
 * Sim. Invoices - 99%
-* Purch. Orders - 99%
+* Purch. Orders - 100%
 
 ## Tests
 
@@ -34,7 +34,7 @@ And pretzels!
 * Charts        - 100%
 * Taxes         - 100%
 * Schedules     - 60%
-* Sim. Invoices - 99%
+* Sim. Invoices - 100%
 * Credit Notes  - 100%
 * Purch. Orders - 100%
  

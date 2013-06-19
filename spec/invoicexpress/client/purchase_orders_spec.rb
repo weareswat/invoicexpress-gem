@@ -20,8 +20,6 @@ describe Invoicexpress::Client::PurchaseOrders do
     it "creates a new purchase order" do
       stub_post("/purchase_orders.xml").
         to_return(xml_response("po.create.xml"))
-
-      
             
       object = Invoicexpress::Models::PurchaseOrder.new(
         :date => Date.new(2013, 5, 30),
@@ -45,7 +43,7 @@ describe Invoicexpress::Client::PurchaseOrders do
       )
 
       item = @client.create_purchase_order(object)
-      item.id.should              == "1430276"
+      item.id.should              == 1430276
       item.delivery_site.should   == "LX Factory"
     end
   end
@@ -58,6 +56,16 @@ describe Invoicexpress::Client::PurchaseOrders do
       item = @client.purchase_order(1430276)
       item.status.should == "draft"
       item.delivery_site.should == "LX Factory"
+    end
+  end
+
+  describe ".update_purchase_order" do
+    it "updates the purchase order" do
+      stub_put("/purchase_orders/1430276.xml").
+        to_return(xml_response("clients.update.xml"))
+
+      model = Invoicexpress::Models::PurchaseOrder.new(:id => 1430276)
+      expect { @client.update_purchase_order(model) }.to_not raise_error
     end
   end
 

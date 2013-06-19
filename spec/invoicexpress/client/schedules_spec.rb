@@ -23,8 +23,8 @@ describe Invoicexpress::Client::Schedules do
         to_return(xml_response("schedules.get.xml"))
 
       c = @client.schedule("4307")
-      c.id.should == "4307"
-      c.observations.should == "Foi criado no site."
+      c.id.should == 4307
+      c.retention.should == 5.0
     end
   end
 

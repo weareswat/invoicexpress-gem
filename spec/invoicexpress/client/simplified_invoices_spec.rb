@@ -62,6 +62,16 @@ describe Invoicexpress::Client::SimplifiedInvoices do
     end
   end
 
+  describe ".update_simplified_invoice" do
+    it "updates the simplified invoice" do
+      stub_put("/simplified_invoices/1425061.xml").
+        to_return(xml_response("clients.update.xml"))
+
+      model = Invoicexpress::Models::SimplifiedInvoice.new(:id => 1425061)
+      expect { @client.update_simplified_invoice(model) }.to_not raise_error
+    end
+  end
+
   describe ".update_simplified_invoice_state" do
     it "updates the state" do
       stub_put("/simplified_invoices/1425061/change-state.xml").

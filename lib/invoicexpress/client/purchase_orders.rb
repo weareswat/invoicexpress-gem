@@ -59,7 +59,7 @@ module Invoicexpress
       def update_purchase_order(purchase_order, options={})
         raise(ArgumentError, "purchase order has the wrong type") unless purchase_order.is_a?(Invoicexpress::Models::PurchaseOrder)
 
-        params = { :klass => Invoicexpress::Models::PurchaseOrder, :body => purchase_order }
+        params = { :klass => Invoicexpress::Models::PurchaseOrder, :body => purchase_order.to_core_purchase_order }
         put("purchase_orders/#{purchase_order.id}.xml", params.merge(options))
       end
 
