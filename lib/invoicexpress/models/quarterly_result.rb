@@ -31,10 +31,10 @@ module Invoicexpress
       element :ytd, Float
     end
       
-    class QuaterlyResult < BaseModel
+    class QuarterlyResult < BaseModel
       include HappyMapper
       tag 'quarterly-results'
-      element :year, String
+      element :year, Integer
       element :currency, String
       has_one :quarter01, Quarter01
       has_one :quarter02, Quarter02

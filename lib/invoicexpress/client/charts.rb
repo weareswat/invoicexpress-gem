@@ -47,9 +47,9 @@ module Invoicexpress
       # @param year [Integer] By default year is the current year. It should obey the format YYYY (ex.: 2010)
       # @return [Array<Invoicexpress::Models::TopClient>] An array with all the charting results
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
-      def quarterly_results(options = {})
+      def quarterly_results(year=Date.today.year , options = {})
         #params = { :klass => Invoicexpress::Models::QuaterlyResult }
-        params = {  :klass => Invoicexpress::Models::QuaterlyResult, :year => Date.today.year }
+        params = {  :klass => Invoicexpress::Models::QuarterlyResult, :year => year }
         get("api/charts/quarterly-results.xml", params.merge(options))
       end
     end

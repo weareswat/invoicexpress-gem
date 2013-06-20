@@ -60,9 +60,9 @@ describe Invoicexpress::Client::Charts do
       stub_get("/api/charts/quarterly-results.xml?year=2010").
         to_return(xml_response("charts.quarterly-results.xml"))
 
-      list = @client.quarterly_results({:year=>2010})
+      list = @client.quarterly_results(2010)
       list.quarter01.invoicing.should ==60.0
-      list.year.should =="2010"
+      list.year.should ==2010
    end
   end
    
