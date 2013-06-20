@@ -42,22 +42,28 @@ module Invoicexpress
       def self.included(base)
         base.class_eval do
           include HappyMapper
-
           element :id, Integer
-          element :status, String
-          element :sequence_number, String
           element :date, Date, :on_save => DATE_FORMAT 
           element :due_date, Date, :on_save => DATE_FORMAT
           element :reference, String
           element :observations, String
           element :retention, Float
           element :tax_exemption, String
-
+          element :sequence_id, Integer
+          element :mb_reference, String
           has_one :client, Client
           has_many :items, Item, :on_save => Proc.new { |value|
             Items.new(:items => value)
           }
+        end
+      end
+    end
 
+    module ExtraInvoice
+      def self.included(base)
+        base.class_eval do
+          element :status, String
+          element :sequence_number, String
           element :currency, String
           element :sum, Float
           element :discount, Float
@@ -66,32 +72,55 @@ module Invoicexpress
           element :total, Float
           element :mb_reference, Integer
         end
-
       end
+    end
+
+    class CoreSimplifiedInvoice < BaseModel
+      include BaseInvoice
+      tag 'simplified_invoice'
     end
 
     class SimplifiedInvoice < BaseModel
       include BaseInvoice
+      include ExtraInvoice
       tag 'simplified_invoice'
+      def to_core()
+        invoice = Invoicexpress::Models::CoreSimplifiedInvoice.new(
+          :date => self.date,
+          :due_date => self.due_date,
+          :reference=> self.reference,
+          :observations=> self.observations,
+          :retention=> self.retention,
+          :tax_exemption => self.tax_exemption,
+          :sequence_id=> self.sequence_id,
+          :client => self.client,
+          :items => self.items,
+          :mb_reference=> self.mb_reference
+        )
+      end
     end
     
     class Invoice < BaseModel
       include BaseInvoice
+      include ExtraInvoice
       tag 'invoice'
     end
 
     class CashInvoice < BaseModel
       include BaseInvoice
+      include ExtraInvoice
       tag 'cash_invoice'
     end
 
     class CreditNote < BaseModel
       include BaseInvoice
+      include ExtraInvoice
       tag 'credit_note'
     end
 
     class DebitNote < BaseModel
       include BaseInvoice
+      include ExtraInvoice
       tag 'debit_note'
     end
 

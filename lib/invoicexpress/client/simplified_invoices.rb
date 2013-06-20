@@ -81,7 +81,7 @@ module Invoicexpress
       def update_simplified_invoice(simplified_invoice, options={})
         raise(ArgumentError, "simplified invoice has the wrong type") unless simplified_invoice.is_a?(Invoicexpress::Models::SimplifiedInvoice)
 
-        params = { :klass => Invoicexpress::Models::SimplifiedInvoice, :body => simplified_invoice }
+        params = { :klass => Invoicexpress::Models::SimplifiedInvoice, :body => simplified_invoice.to_core() }
         put("simplified_invoices/#{simplified_invoice.id}.xml", params.merge(options))
       end
 
