@@ -1,0 +1,1041 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Invoicexpress::Client::CreditNotes
+  
+    &mdash; Documentation by YARD 0.8.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Invoicexpress.html" title="Invoicexpress (module)">Invoicexpress</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Client.html" title="Invoicexpress::Client (class)">Client</a></span></span>
+     &raquo; 
+    <span class="title">CreditNotes</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Invoicexpress::Client::CreditNotes
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1">Included in:</dt>
+    <dd class="r1"><span class='object_link'><a href="../Client.html" title="Invoicexpress::Client (class)">Invoicexpress::Client</a></span></dd>
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/invoicexpress/client/credit_notes.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_credit_note-instance_method" title="#create_credit_note (instance method)">- (Invoicexpress::Models::CreditNote) <strong>create_credit_note</strong>(credit_note, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new credit note.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#credit_note-instance_method" title="#credit_note (instance method)">- (Invoicexpress::Models::CreditNote) <strong>credit_note</strong>(credit_note_id, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns all the information about a credit note:
+- Basic information (date, status, sequence number)
+- Client
+- Document items
+- Document timeline
+Document timeline is composed by:
+- Date, time and the user who created it
+- Type of the event
+The complete list of timeline events is:
+- create
+- edited
+- send_email
+- canceled
+- deleted
+- settled
+- second_copy
+- archived
+- unarchived
+- comment.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#credit_note_mail-instance_method" title="#credit_note_mail (instance method)">- (Object) <strong>credit_note_mail</strong>(credit_note_id, message, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sends the credit note through email.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#credit_notes-instance_method" title="#credit_notes (instance method)">- (Invoicexpress::Models::CreditNotes) <strong>credit_notes</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns all your credit notes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_credit_note-instance_method" title="#update_credit_note (instance method)">- (Object) <strong>update_credit_note</strong>(credit_note, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Updates a credit note
+It also allows you to create a new client and/or items in the same request.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_credit_note_state-instance_method" title="#update_credit_note_state (instance method)">- (Invoicexpress::Models::CreditNote) <strong>update_credit_note_state</strong>(credit_note_id, credit_note_state, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Changes the state of a credit note.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_credit_note-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>) <strong>create_credit_note</strong>(credit_note, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new credit note. Also allows to create a new client and/or new items in the same request.
+If the client name does not exist a new one is created.
+If items do not exist with the given names, new ones will be created.
+If item name  already exists, the item is updated with the new values.
+Regarding item taxes, if the tax name is not found, no tax is applyed to that item.
+Portuguese accounts should also send the IVA exemption reason if the invoice contains exempt items(IVA 0%)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>credit_note</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The credit note to create</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The created credit note</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_credit_note'>create_credit_note</span><span class='lparen'>(</span><span class='id identifier rubyid_credit_note'>credit_note</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit note has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_credit_note'>credit_note</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span><span class='comma'>,</span> <span class='symbol'>:body</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_credit_note'>credit_note</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="credit_note-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>) <strong>credit_note</strong>(credit_note_id, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns all the information about a credit note:
+- Basic information (date, status, sequence number)
+- Client
+- Document items
+- Document timeline
+Document timeline is composed by:
+- Date, time and the user who created it
+- Type of the event
+The complete list of timeline events is:
+- create
+- edited
+- send_email
+- canceled
+- deleted
+- settled
+- second_copy
+- archived
+- unarchived
+- comment</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>credit_note_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Requested credit note id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The requested credit note</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit_note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_credit_note'>credit_note</span><span class='lparen'>(</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='rbrace'>}</span><span class='tstring_content'>.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="credit_note_mail-instance_method">
+  
+    - (<tt>Object</tt>) <strong>credit_note_mail</strong>(credit_note_id, message, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sends the credit note through email</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>credit_note_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The credit note id to send</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/Message.html" title="Invoicexpress::Models::Message (class)">Invoicexpress::Models::Message</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The message to send</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_credit_note_mail'>credit_note_mail</span><span class='lparen'>(</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>Message</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='rbrace'>}</span><span class='tstring_content'>/email-document.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="credit_notes-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Models/CreditNotes.html" title="Invoicexpress::Models::CreditNotes (class)">Invoicexpress::Models::CreditNotes</a></span></tt>) <strong>credit_notes</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns all your credit notes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">page</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>You can ask a specific page of credit notes</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNotes.html" title="Invoicexpress::Models::CreditNotes (class)">Invoicexpress::Models::CreditNotes</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>A struct with results (pagination) and all the credit notes</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_credit_notes'>credit_notes</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:page</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_credit_note-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_credit_note</strong>(credit_note, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Updates a credit note
+It also allows you to create a new client and/or items in the same request.
+If the client name does not exist a new client is created.
+Regarding item taxes, if the tax name is not found, no tax will be applied to that item.
+If item does not exist with the given name, a new one will be created.
+If item exists it will be updated with the new values
+Be careful when updating the document items, any missing items from the original document will be deleted.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>credit_note</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The credit note to update</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_credit_note'>update_credit_note</span><span class='lparen'>(</span><span class='id identifier rubyid_credit_note'>credit_note</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit note has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_credit_note'>credit_note</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_credit_note'>credit_note</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CreditNote ID is required</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span><span class='comma'>,</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_credit_note'>credit_note</span><span class='period'>.</span><span class='id identifier rubyid_to_core'>to_core</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_credit_note'>credit_note</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='tstring_content'>.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_credit_note_state-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>) <strong>update_credit_note_state</strong>(credit_note_id, credit_note_state, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Changes the state of a credit note.
+Possible state transitions:
+- draft to final ??? finalized
+- draft to deleted ??? deleted
+- settled to final ??? unsettled
+- final to second copy ??? second_copy
+- final or second copy to canceled ??? canceled
+- final or second copy to settled ??? settled
+Any other transitions will fail.
+When canceling a credit note you must specify a reason.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>credit_note_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The credit note id to change</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>credit_note_state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/InvoiceState.html" title="Invoicexpress::Models::InvoiceState (class)">Invoicexpress::Models::InvoiceState</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The new state</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/CreditNote.html" title="Invoicexpress::Models::CreditNote (class)">Invoicexpress::Models::CreditNote</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The updated credit note</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/credit_notes.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_credit_note_state'>update_credit_note_state</span><span class='lparen'>(</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='comma'>,</span> <span class='id identifier rubyid_credit_note_state'>credit_note_state</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit note state has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_credit_note_state'>credit_note_state</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>InvoiceState</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>CreditNote</span><span class='comma'>,</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_credit_note_state'>credit_note_state</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>credit_notes/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_credit_note_id'>credit_note_id</span><span class='rbrace'>}</span><span class='tstring_content'>/change-state.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Jun 20 18:40:55 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

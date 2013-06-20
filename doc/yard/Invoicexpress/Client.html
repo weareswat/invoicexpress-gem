@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Invoicexpress::Client
+  
+    &mdash; Documentation by YARD 0.8.5
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Invoicexpress.html" title="Invoicexpress (module)">Invoicexpress</a></span></span>
+     &raquo; 
+    <span class="title">Client</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Invoicexpress::Client
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Invoicexpress::Client</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="Authentication.html" title="Invoicexpress::Authentication (module)">Authentication</a></span>, <span class='object_link'><a href="Client/CashInvoices.html" title="Invoicexpress::Client::CashInvoices (module)">CashInvoices</a></span>, <span class='object_link'><a href="Client/Charts.html" title="Invoicexpress::Client::Charts (module)">Charts</a></span>, <span class='object_link'><a href="Client/Clients.html" title="Invoicexpress::Client::Clients (module)">Clients</a></span>, <span class='object_link'><a href="Client/CreditNotes.html" title="Invoicexpress::Client::CreditNotes (module)">CreditNotes</a></span>, <span class='object_link'><a href="Client/DebitNotes.html" title="Invoicexpress::Client::DebitNotes (module)">DebitNotes</a></span>, <span class='object_link'><a href="Client/Invoices.html" title="Invoicexpress::Client::Invoices (module)">Invoices</a></span>, <span class='object_link'><a href="Client/Items.html" title="Invoicexpress::Client::Items (module)">Items</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html" title="Invoicexpress::Client::PurchaseOrders (module)">PurchaseOrders</a></span>, <span class='object_link'><a href="Client/Schedules.html" title="Invoicexpress::Client::Schedules (module)">Schedules</a></span>, <span class='object_link'><a href="Client/Sequences.html" title="Invoicexpress::Client::Sequences (module)">Sequences</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html" title="Invoicexpress::Client::SimplifiedInvoices (module)">SimplifiedInvoices</a></span>, <span class='object_link'><a href="Client/Taxes.html" title="Invoicexpress::Client::Taxes (module)">Taxes</a></span>, <span class='object_link'><a href="Client/Users.html" title="Invoicexpress::Client::Users (module)">Users</a></span>, <span class='object_link'><a href="Connection.html" title="Invoicexpress::Connection (module)">Connection</a></span>, <span class='object_link'><a href="Request.html" title="Invoicexpress::Request (module)">Request</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/invoicexpress/client.rb<span class="defines">,<br />
+  lib/invoicexpress/client/items.rb,<br /> lib/invoicexpress/client/taxes.rb,<br /> lib/invoicexpress/client/users.rb,<br /> lib/invoicexpress/client/charts.rb,<br /> lib/invoicexpress/client/clients.rb,<br /> lib/invoicexpress/client/invoices.rb,<br /> lib/invoicexpress/client/sequences.rb,<br /> lib/invoicexpress/client/schedules.rb,<br /> lib/invoicexpress/client/debit_notes.rb,<br /> lib/invoicexpress/client/credit_notes.rb,<br /> lib/invoicexpress/client/cash_invoices.rb,<br /> lib/invoicexpress/client/purchase_orders.rb,<br /> lib/invoicexpress/client/simplified_invoices.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Please refer to each section inside the client for the respective documentation.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Client/CashInvoices.html" title="Invoicexpress::Client::CashInvoices (module)">CashInvoices</a></span>, <span class='object_link'><a href="Client/Charts.html" title="Invoicexpress::Client::Charts (module)">Charts</a></span>, <span class='object_link'><a href="Client/Clients.html" title="Invoicexpress::Client::Clients (module)">Clients</a></span>, <span class='object_link'><a href="Client/CreditNotes.html" title="Invoicexpress::Client::CreditNotes (module)">CreditNotes</a></span>, <span class='object_link'><a href="Client/DebitNotes.html" title="Invoicexpress::Client::DebitNotes (module)">DebitNotes</a></span>, <span class='object_link'><a href="Client/Invoices.html" title="Invoicexpress::Client::Invoices (module)">Invoices</a></span>, <span class='object_link'><a href="Client/Items.html" title="Invoicexpress::Client::Items (module)">Items</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html" title="Invoicexpress::Client::PurchaseOrders (module)">PurchaseOrders</a></span>, <span class='object_link'><a href="Client/Schedules.html" title="Invoicexpress::Client::Schedules (module)">Schedules</a></span>, <span class='object_link'><a href="Client/Sequences.html" title="Invoicexpress::Client::Sequences (module)">Sequences</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html" title="Invoicexpress::Client::SimplifiedInvoices (module)">SimplifiedInvoices</a></span>, <span class='object_link'><a href="Client/Taxes.html" title="Invoicexpress::Client::Taxes (module)">Taxes</a></span>, <span class='object_link'><a href="Client/Users.html" title="Invoicexpress::Client::Users (module)">Users</a></span>
+    
+  
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Client) <strong>initialize</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>A new instance of Client.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/SimplifiedInvoices.html" title="Invoicexpress::Client::SimplifiedInvoices (module)">SimplifiedInvoices</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/SimplifiedInvoices.html#create_simplified_invoice-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#create_simplified_invoice (method)">#create_simplified_invoice</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html#simplified_invoice-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#simplified_invoice (method)">#simplified_invoice</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html#simplified_invoice_mail-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#simplified_invoice_mail (method)">#simplified_invoice_mail</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html#simplified_invoices-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#simplified_invoices (method)">#simplified_invoices</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html#update_simplified_invoice-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#update_simplified_invoice (method)">#update_simplified_invoice</a></span>, <span class='object_link'><a href="Client/SimplifiedInvoices.html#update_simplified_invoice_state-instance_method" title="Invoicexpress::Client::SimplifiedInvoices#update_simplified_invoice_state (method)">#update_simplified_invoice_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/CreditNotes.html" title="Invoicexpress::Client::CreditNotes (module)">CreditNotes</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/CreditNotes.html#create_credit_note-instance_method" title="Invoicexpress::Client::CreditNotes#create_credit_note (method)">#create_credit_note</a></span>, <span class='object_link'><a href="Client/CreditNotes.html#credit_note-instance_method" title="Invoicexpress::Client::CreditNotes#credit_note (method)">#credit_note</a></span>, <span class='object_link'><a href="Client/CreditNotes.html#credit_note_mail-instance_method" title="Invoicexpress::Client::CreditNotes#credit_note_mail (method)">#credit_note_mail</a></span>, <span class='object_link'><a href="Client/CreditNotes.html#credit_notes-instance_method" title="Invoicexpress::Client::CreditNotes#credit_notes (method)">#credit_notes</a></span>, <span class='object_link'><a href="Client/CreditNotes.html#update_credit_note-instance_method" title="Invoicexpress::Client::CreditNotes#update_credit_note (method)">#update_credit_note</a></span>, <span class='object_link'><a href="Client/CreditNotes.html#update_credit_note_state-instance_method" title="Invoicexpress::Client::CreditNotes#update_credit_note_state (method)">#update_credit_note_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/DebitNotes.html" title="Invoicexpress::Client::DebitNotes (module)">DebitNotes</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/DebitNotes.html#create_debit_note-instance_method" title="Invoicexpress::Client::DebitNotes#create_debit_note (method)">#create_debit_note</a></span>, <span class='object_link'><a href="Client/DebitNotes.html#debit_note-instance_method" title="Invoicexpress::Client::DebitNotes#debit_note (method)">#debit_note</a></span>, <span class='object_link'><a href="Client/DebitNotes.html#debit_note_mail-instance_method" title="Invoicexpress::Client::DebitNotes#debit_note_mail (method)">#debit_note_mail</a></span>, <span class='object_link'><a href="Client/DebitNotes.html#debit_notes-instance_method" title="Invoicexpress::Client::DebitNotes#debit_notes (method)">#debit_notes</a></span>, <span class='object_link'><a href="Client/DebitNotes.html#update_debit_note-instance_method" title="Invoicexpress::Client::DebitNotes#update_debit_note (method)">#update_debit_note</a></span>, <span class='object_link'><a href="Client/DebitNotes.html#update_debit_note_state-instance_method" title="Invoicexpress::Client::DebitNotes#update_debit_note_state (method)">#update_debit_note_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/PurchaseOrders.html" title="Invoicexpress::Client::PurchaseOrders (module)">PurchaseOrders</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/PurchaseOrders.html#create_purchase_order-instance_method" title="Invoicexpress::Client::PurchaseOrders#create_purchase_order (method)">#create_purchase_order</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html#purchase_order-instance_method" title="Invoicexpress::Client::PurchaseOrders#purchase_order (method)">#purchase_order</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html#purchase_order_mail-instance_method" title="Invoicexpress::Client::PurchaseOrders#purchase_order_mail (method)">#purchase_order_mail</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html#purchase_orders-instance_method" title="Invoicexpress::Client::PurchaseOrders#purchase_orders (method)">#purchase_orders</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html#update_purchase_order-instance_method" title="Invoicexpress::Client::PurchaseOrders#update_purchase_order (method)">#update_purchase_order</a></span>, <span class='object_link'><a href="Client/PurchaseOrders.html#update_purchase_order_state-instance_method" title="Invoicexpress::Client::PurchaseOrders#update_purchase_order_state (method)">#update_purchase_order_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Schedules.html" title="Invoicexpress::Client::Schedules (module)">Schedules</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Schedules.html#activate_schedule-instance_method" title="Invoicexpress::Client::Schedules#activate_schedule (method)">#activate_schedule</a></span>, <span class='object_link'><a href="Client/Schedules.html#create_schedule-instance_method" title="Invoicexpress::Client::Schedules#create_schedule (method)">#create_schedule</a></span>, <span class='object_link'><a href="Client/Schedules.html#deactivate_schedule-instance_method" title="Invoicexpress::Client::Schedules#deactivate_schedule (method)">#deactivate_schedule</a></span>, <span class='object_link'><a href="Client/Schedules.html#schedule-instance_method" title="Invoicexpress::Client::Schedules#schedule (method)">#schedule</a></span>, <span class='object_link'><a href="Client/Schedules.html#schedules-instance_method" title="Invoicexpress::Client::Schedules#schedules (method)">#schedules</a></span>, <span class='object_link'><a href="Client/Schedules.html#update_schedule-instance_method" title="Invoicexpress::Client::Schedules#update_schedule (method)">#update_schedule</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Taxes.html" title="Invoicexpress::Client::Taxes (module)">Taxes</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Taxes.html#create_tax-instance_method" title="Invoicexpress::Client::Taxes#create_tax (method)">#create_tax</a></span>, <span class='object_link'><a href="Client/Taxes.html#delete_tax-instance_method" title="Invoicexpress::Client::Taxes#delete_tax (method)">#delete_tax</a></span>, <span class='object_link'><a href="Client/Taxes.html#tax-instance_method" title="Invoicexpress::Client::Taxes#tax (method)">#tax</a></span>, <span class='object_link'><a href="Client/Taxes.html#taxes-instance_method" title="Invoicexpress::Client::Taxes#taxes (method)">#taxes</a></span>, <span class='object_link'><a href="Client/Taxes.html#update_tax-instance_method" title="Invoicexpress::Client::Taxes#update_tax (method)">#update_tax</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Charts.html" title="Invoicexpress::Client::Charts (module)">Charts</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Charts.html#invoicing_chart-instance_method" title="Invoicexpress::Client::Charts#invoicing_chart (method)">#invoicing_chart</a></span>, <span class='object_link'><a href="Client/Charts.html#quarterly_results-instance_method" title="Invoicexpress::Client::Charts#quarterly_results (method)">#quarterly_results</a></span>, <span class='object_link'><a href="Client/Charts.html#top_clients-instance_method" title="Invoicexpress::Client::Charts#top_clients (method)">#top_clients</a></span>, <span class='object_link'><a href="Client/Charts.html#top_debtors-instance_method" title="Invoicexpress::Client::Charts#top_debtors (method)">#top_debtors</a></span>, <span class='object_link'><a href="Client/Charts.html#treasury_chart-instance_method" title="Invoicexpress::Client::Charts#treasury_chart (method)">#treasury_chart</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Users.html" title="Invoicexpress::Client::Users (module)">Users</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Users.html#accounts-instance_method" title="Invoicexpress::Client::Users#accounts (method)">#accounts</a></span>, <span class='object_link'><a href="Client/Users.html#change_account-instance_method" title="Invoicexpress::Client::Users#change_account (method)">#change_account</a></span>, <span class='object_link'><a href="Client/Users.html#login-instance_method" title="Invoicexpress::Client::Users#login (method)">#login</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Sequences.html" title="Invoicexpress::Client::Sequences (module)">Sequences</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Sequences.html#create_sequence-instance_method" title="Invoicexpress::Client::Sequences#create_sequence (method)">#create_sequence</a></span>, <span class='object_link'><a href="Client/Sequences.html#sequence-instance_method" title="Invoicexpress::Client::Sequences#sequence (method)">#sequence</a></span>, <span class='object_link'><a href="Client/Sequences.html#sequences-instance_method" title="Invoicexpress::Client::Sequences#sequences (method)">#sequences</a></span>, <span class='object_link'><a href="Client/Sequences.html#update_sequence-instance_method" title="Invoicexpress::Client::Sequences#update_sequence (method)">#update_sequence</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Items.html" title="Invoicexpress::Client::Items (module)">Items</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Items.html#create_item-instance_method" title="Invoicexpress::Client::Items#create_item (method)">#create_item</a></span>, <span class='object_link'><a href="Client/Items.html#delete_item-instance_method" title="Invoicexpress::Client::Items#delete_item (method)">#delete_item</a></span>, <span class='object_link'><a href="Client/Items.html#item-instance_method" title="Invoicexpress::Client::Items#item (method)">#item</a></span>, <span class='object_link'><a href="Client/Items.html#items-instance_method" title="Invoicexpress::Client::Items#items (method)">#items</a></span>, <span class='object_link'><a href="Client/Items.html#update_item-instance_method" title="Invoicexpress::Client::Items#update_item (method)">#update_item</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/CashInvoices.html" title="Invoicexpress::Client::CashInvoices (module)">CashInvoices</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/CashInvoices.html#cash_invoice-instance_method" title="Invoicexpress::Client::CashInvoices#cash_invoice (method)">#cash_invoice</a></span>, <span class='object_link'><a href="Client/CashInvoices.html#cash_invoices-instance_method" title="Invoicexpress::Client::CashInvoices#cash_invoices (method)">#cash_invoices</a></span>, <span class='object_link'><a href="Client/CashInvoices.html#create_cash_invoice-instance_method" title="Invoicexpress::Client::CashInvoices#create_cash_invoice (method)">#create_cash_invoice</a></span>, <span class='object_link'><a href="Client/CashInvoices.html#invoice_email-instance_method" title="Invoicexpress::Client::CashInvoices#invoice_email (method)">#invoice_email</a></span>, <span class='object_link'><a href="Client/CashInvoices.html#update_cash_invoice-instance_method" title="Invoicexpress::Client::CashInvoices#update_cash_invoice (method)">#update_cash_invoice</a></span>, <span class='object_link'><a href="Client/CashInvoices.html#update_cash_invoice_state-instance_method" title="Invoicexpress::Client::CashInvoices#update_cash_invoice_state (method)">#update_cash_invoice_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Invoices.html" title="Invoicexpress::Client::Invoices (module)">Invoices</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Invoices.html#create_invoice-instance_method" title="Invoicexpress::Client::Invoices#create_invoice (method)">#create_invoice</a></span>, <span class='object_link'><a href="Client/Invoices.html#invoice-instance_method" title="Invoicexpress::Client::Invoices#invoice (method)">#invoice</a></span>, <span class='object_link'><a href="Client/Invoices.html#invoice_mail-instance_method" title="Invoicexpress::Client::Invoices#invoice_mail (method)">#invoice_mail</a></span>, <span class='object_link'><a href="Client/Invoices.html#invoices-instance_method" title="Invoicexpress::Client::Invoices#invoices (method)">#invoices</a></span>, <span class='object_link'><a href="Client/Invoices.html#update_invoice-instance_method" title="Invoicexpress::Client::Invoices#update_invoice (method)">#update_invoice</a></span>, <span class='object_link'><a href="Client/Invoices.html#update_invoice_state-instance_method" title="Invoicexpress::Client::Invoices#update_invoice_state (method)">#update_invoice_state</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Client/Clients.html" title="Invoicexpress::Client::Clients (module)">Clients</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Client/Clients.html#client-instance_method" title="Invoicexpress::Client::Clients#client (method)">#client</a></span>, <span class='object_link'><a href="Client/Clients.html#client_by_code-instance_method" title="Invoicexpress::Client::Clients#client_by_code (method)">#client_by_code</a></span>, <span class='object_link'><a href="Client/Clients.html#client_by_name-instance_method" title="Invoicexpress::Client::Clients#client_by_name (method)">#client_by_name</a></span>, <span class='object_link'><a href="Client/Clients.html#client_create_cash_invoice-instance_method" title="Invoicexpress::Client::Clients#client_create_cash_invoice (method)">#client_create_cash_invoice</a></span>, <span class='object_link'><a href="Client/Clients.html#client_create_credit_note-instance_method" title="Invoicexpress::Client::Clients#client_create_credit_note (method)">#client_create_credit_note</a></span>, <span class='object_link'><a href="Client/Clients.html#client_create_debit_note-instance_method" title="Invoicexpress::Client::Clients#client_create_debit_note (method)">#client_create_debit_note</a></span>, <span class='object_link'><a href="Client/Clients.html#client_create_invoice-instance_method" title="Invoicexpress::Client::Clients#client_create_invoice (method)">#client_create_invoice</a></span>, <span class='object_link'><a href="Client/Clients.html#client_invoices-instance_method" title="Invoicexpress::Client::Clients#client_invoices (method)">#client_invoices</a></span>, <span class='object_link'><a href="Client/Clients.html#clients-instance_method" title="Invoicexpress::Client::Clients#clients (method)">#clients</a></span>, <span class='object_link'><a href="Client/Clients.html#create_client-instance_method" title="Invoicexpress::Client::Clients#create_client (method)">#create_client</a></span>, <span class='object_link'><a href="Client/Clients.html#update_client-instance_method" title="Invoicexpress::Client::Clients#update_client (method)">#update_client</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Request.html" title="Invoicexpress::Request (module)">Request</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Request.html#delete-instance_method" title="Invoicexpress::Request#delete (method)">#delete</a></span>, <span class='object_link'><a href="Request.html#get-instance_method" title="Invoicexpress::Request#get (method)">#get</a></span>, <span class='object_link'><a href="Request.html#patch-instance_method" title="Invoicexpress::Request#patch (method)">#patch</a></span>, <span class='object_link'><a href="Request.html#post-instance_method" title="Invoicexpress::Request#post (method)">#post</a></span>, <span class='object_link'><a href="Request.html#put-instance_method" title="Invoicexpress::Request#put (method)">#put</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Authentication.html" title="Invoicexpress::Authentication (module)">Authentication</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Authentication.html#authenticated%3F-instance_method" title="Invoicexpress::Authentication#authenticated? (method)">#authenticated?</a></span>, <span class='object_link'><a href="Authentication.html#authentication-instance_method" title="Invoicexpress::Authentication#authentication (method)">#authentication</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Invoicexpress::Client (class)">Client</a></span></tt>) <strong>initialize</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>A new instance of Client</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'>Invoicexpress</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='const'>Configuration</span><span class='op'>::</span><span class='const'>VALID_OPTIONS_KEYS</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='op'>|</span>
+    <span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_key'>key</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Jun 20 18:40:56 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

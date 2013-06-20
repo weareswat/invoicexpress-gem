@@ -1,0 +1,1012 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Invoicexpress::Client::PurchaseOrders
+  
+    &mdash; Documentation by YARD 0.8.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Invoicexpress.html" title="Invoicexpress (module)">Invoicexpress</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Client.html" title="Invoicexpress::Client (class)">Client</a></span></span>
+     &raquo; 
+    <span class="title">PurchaseOrders</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Invoicexpress::Client::PurchaseOrders
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1">Included in:</dt>
+    <dd class="r1"><span class='object_link'><a href="../Client.html" title="Invoicexpress::Client (class)">Invoicexpress::Client</a></span></dd>
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/invoicexpress/client/purchase_orders.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_purchase_order-instance_method" title="#create_purchase_order (instance method)">- (Object) <strong>create_purchase_order</strong>(purchase_order, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Creates a new purchase order.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purchase_order-instance_method" title="#purchase_order (instance method)">- (Object) <strong>purchase_order</strong>(purchase_order, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns a specific purchase order.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purchase_order_mail-instance_method" title="#purchase_order_mail (instance method)">- (Object) <strong>purchase_order_mail</strong>(purchase_order_id, message, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Sends the purchase order by email.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#purchase_orders-instance_method" title="#purchase_orders (instance method)">- (Array&lt;Invoicexpress::Models::PurchaseOrder&gt;) <strong>purchase_orders</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns all your purchase orders.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_purchase_order-instance_method" title="#update_purchase_order (instance method)">- (Object) <strong>update_purchase_order</strong>(purchase_order, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Updates a purchase order
+Updates a purchase order.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_purchase_order_state-instance_method" title="#update_purchase_order_state (instance method)">- (Invoicexpress::Models::PurchaseOrder) <strong>update_purchase_order_state</strong>(purchase_order_id, purchase_order_state, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Changes the state of a purchase order.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_purchase_order-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_purchase_order</strong>(purchase_order, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Creates a new purchase order.
+Creates a new purchase order. Also allows to create a new supplier and/or new items in the same request.
+If the supplier name does not exist a new one is created.
+If items do not exist with the given names, new ones will be created.
+If item name already exists, the item is updated with the new values.
+Regarding item taxes, if the tax name is not found, no tax is applyed to that item.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>purchase_order</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The PurchaseOrder to create</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Models::PurchaseOrder The PurchaseOrder</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_purchase_order'>create_purchase_order</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase order has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span><span class='comma'>,</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_purchase_order'>purchase_order</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase_order-instance_method">
+  
+    - (<tt>Object</tt>) <strong>purchase_order</strong>(purchase_order, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns a specific purchase order.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>purchase_order</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span></tt>, <tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The purchase order or purchase orderID</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Models::PurchaseOrder The PurchaseOrder</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the purchase_order doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id_from_purchase_order'>id_from_purchase_order</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase_order_mail-instance_method">
+  
+    - (<tt>Object</tt>) <strong>purchase_order_mail</strong>(purchase_order_id, message, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Sends the purchase order by email</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>purchase_order_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The credit note id to send</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/Message.html" title="Invoicexpress::Models::Message (class)">Invoicexpress::Models::Message</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The message to send</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase_order_mail'>purchase_order_mail</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order_id'>purchase_order_id</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>Message</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_purchase_order_id'>purchase_order_id</span><span class='rbrace'>}</span><span class='tstring_content'>/email-document.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="purchase_orders-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span>&gt;</tt>) <strong>purchase_orders</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns all your purchase orders.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>a customizable set of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">page</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>1</tt>
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>You can ask a specific page of PurchaseOrders</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>An array with all the PurchaseOrders</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_purchase_orders'>purchase_orders</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:page</span> <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span> <span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_purchase_order-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_purchase_order</strong>(purchase_order, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Updates a purchase order
+Updates a purchase order. Also allows to create a new supplier and/or new items in the same request.
+If the supplier name does not exist a new one is created.
+If items do not exist with the given names, new ones will be created.
+If item name already exists, the item is updated with the new values.
+Regarding item taxes, if the tax name is not found, no tax is applyed to that item.
+Be careful when updating the invoice items, any missing items from the original invoice will be deleted.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>purchase_order</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The Purchase Order to update</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_purchase_order'>update_purchase_order</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase order has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span><span class='rparen'>)</span>
+
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Purchase Order ID is required</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span><span class='comma'>,</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_to_core_purchase_order'>to_core_purchase_order</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='tstring_content'>.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_purchase_order_state-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span></tt>) <strong>update_purchase_order_state</strong>(purchase_order_id, purchase_order_state, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Changes the state of a purchase order.
+Possible state transitions:
+- draft to final ??? finalized
+- draft to deleted ??? deleted
+- final to second_copy ??? second_copy
+- final to accepted ??? accepted
+- final to refused ??? refused
+- final to canceled ??? canceled
+- second_copy to canceled ??? canceled
+- accepted to refused ??? refused
+- accepted to completed ??? completed
+- refused to canceled ??? canceled
+- refused to accepted ??? accepted
+Any other transitions will fail.
+When canceling an purchase order you must specify a reason.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>purchase_order_id</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The purchase order id to change</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>purchase_order_state</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/InvoiceState.html" title="Invoicexpress::Models::InvoiceState (class)">Invoicexpress::Models::InvoiceState</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The new state</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../Models/PurchaseOrder.html" title="Invoicexpress::Models::PurchaseOrder (class)">Invoicexpress::Models::PurchaseOrder</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The updated Purchase Order</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::Unauthorized When the client is unauthorized</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::UnprocessableEntity When there are errors on the submission</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'><p>Invoicexpress::NotFound When the credit note doesn&#8217;t exist</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress/client/purchase_orders.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_purchase_order_state'>update_purchase_order_state</span><span class='lparen'>(</span><span class='id identifier rubyid_purchase_order_id'>purchase_order_id</span><span class='comma'>,</span> <span class='id identifier rubyid_purchase_order_state'>purchase_order_state</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_order_state has the wrong type</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_purchase_order_state'>purchase_order_state</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>InvoiceState</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='symbol'>:klass</span> <span class='op'>=&gt;</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Models</span><span class='op'>::</span><span class='const'>PurchaseOrder</span><span class='comma'>,</span> <span class='symbol'>:body</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_purchase_order_state'>purchase_order_state</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>purchase_orders/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_purchase_order_id'>purchase_order_id</span><span class='rbrace'>}</span><span class='tstring_content'>/change-state.xml</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Jun 20 18:40:56 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
