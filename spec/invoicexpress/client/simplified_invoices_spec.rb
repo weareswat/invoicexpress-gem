@@ -70,8 +70,21 @@ describe Invoicexpress::Client::SimplifiedInvoices do
       model = Invoicexpress::Models::SimplifiedInvoice.new(:id => 1425061)
       expect { @client.update_simplified_invoice(model) }.to_not raise_error
     end
-  end
+    it "raises if no simplified invoice is passed" do
+      expect {
+        @client.update_simplified_invoice(nil)
+      }.to raise_error(ArgumentError)
+    end
 
+    it "raises if the simplified invoice to update has no id" do
+      stub_put("/schedules/.xml").
+        to_return(xml_response("ok.xml"))
+      expect {
+        @client.update_simplified_invoice(Invoicexpress::Models::SimplifiedInvoice.new)
+      }.to raise_error(ArgumentError)
+    end
+  end
+ 
   describe ".update_simplified_invoice_state" do
     it "updates the state" do
       stub_put("/simplified_invoices/1425061/change-state.xml").

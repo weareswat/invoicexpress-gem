@@ -46,6 +46,9 @@ module Invoicexpress
       def update_tax(tax, options={})
         raise(ArgumentError, "tax has the wrong type") unless tax.is_a?(Invoicexpress::Models::Tax)
 
+        if !tax.id
+          raise ArgumentError, "Tax ID is required"
+        end
         params = { :klass => Invoicexpress::Models::Tax, :body => tax }
         put("taxes/#{tax.id}.xml", params.merge(options))
       end

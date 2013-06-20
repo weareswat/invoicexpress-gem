@@ -51,7 +51,28 @@ describe Invoicexpress::Client::CreditNotes do
     end
   end
 
-  
+  describe ".update_credit_note" do
+    it "updates the credit note" do
+      stub_put("/credit_notes/1423940.xml").
+        to_return(xml_response("ok.xml"))
+
+      model = Invoicexpress::Models::CreditNote.new(:id => 1423940)
+      expect { @client.update_credit_note(model) }.to_not raise_error
+    end
+    it "raises if no credit note is passed" do
+      expect {
+        @client.update_credit_note(nil)
+      }.to raise_error(ArgumentError)
+    end
+    it "raises if the credit_note to update has no id" do
+      stub_put("/credit_notes/.xml").
+        to_return(xml_response("ok.xml"))
+      expect {
+        @client.update_credit_note(Invoicexpress::Models::CreditNote.new)
+      }.to raise_error(ArgumentError)
+    end
+  end
+
   describe ".update_credit_note_state" do
     it "updates the state" do
       stub_put("/credit_notes/1423940/change-state.xml").

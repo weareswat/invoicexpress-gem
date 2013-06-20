@@ -46,7 +46,9 @@ module Invoicexpress
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
       def update_sequence(sequence, options={})
         raise(ArgumentError, "sequence has the wrong type") unless sequence.is_a?(Invoicexpress::Models::Sequence)
-
+        if !sequence.id
+          raise ArgumentError, "Sequence ID is required"
+        end
         params = { :klass => Invoicexpress::Models::Sequence, :body => sequence }
         put("sequences/#{sequence.id}.xml", params.merge(options))
       end

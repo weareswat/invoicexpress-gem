@@ -10,10 +10,17 @@ module Invoicexpress
       element :due_days, Integer
     end
 
+    class SentInvoices < BaseModel
+      include HappyMapper
+      tag 'sent_invoices'
+      has_many :invoices, Invoice
+    end
+
     module BaseSchedule
       def self.included(base)
         base.class_eval do
           include HappyMapper
+          tag 'schedule'
 
           element :id, Integer
           #these fields are only used on create and update...
@@ -34,13 +41,11 @@ module Invoicexpress
  
     class CoreSchedule < BaseModel
       include BaseSchedule
-      tag 'schedule'
     end
 
     class Schedule < CoreSchedule
       include BaseSchedule
-
-      tag 'schedule'
+ 
       element :reference, String
       element :retention, Float
       element :currency, String
@@ -54,7 +59,8 @@ module Invoicexpress
       element :before_taxes, Float
       element :taxes, Float
       element :total, Float
-      
+      has_one :sent_invoices, SentInvoices
+
       #creates a object that can be used in create/update by the invoicexpress API
       def to_core_schedule()
         Invoicexpress::Models::CoreSchedule.new(

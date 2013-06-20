@@ -38,6 +38,7 @@ module Invoicexpress
       has_many :items, Item
     end
 
+    # Fields common to all invoice models, necessary for create/update
     module BaseInvoice
       def self.included(base)
         base.class_eval do
@@ -59,6 +60,7 @@ module Invoicexpress
       end
     end
 
+    # Fields only available with GET request
     module ExtraInvoice
       def self.included(base)
         base.class_eval do
@@ -71,6 +73,31 @@ module Invoicexpress
           element :taxes, Float
           element :total, Float
           element :mb_reference, Integer
+        end
+      end
+      
+      def to_core()
+        fields={:date => self.date,
+          :due_date => self.due_date,
+          :reference=> self.reference,
+          :observations=> self.observations,
+          :retention=> self.retention,
+          :tax_exemption => self.tax_exemption,
+          :sequence_id=> self.sequence_id,
+          :client => self.client,
+          :items => self.items,
+          :mb_reference=> self.mb_reference}
+        case self.class.to_s
+        when "Invoicexpress::Models::SimplifiedInvoice"
+          invoice = Invoicexpress::Models::CoreSimplifiedInvoice.new(fields)
+        when "Invoicexpress::Models::CashInvoice"
+          invoice = Invoicexpress::Models::CoreCashInvoice.new(fields)
+        when "Invoicexpress::Models::CreditNote"
+          invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
+        when "Invoicexpress::Models::DebitNote"
+          invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
+        else        
+          invoice = Invoicexpress::Models::CoreInvoice.new(fields)
         end
       end
     end
@@ -106,20 +133,6 @@ module Invoicexpress
       include BaseInvoice
       include ExtraInvoice
       tag 'simplified_invoice'
-      def to_core()
-        invoice = Invoicexpress::Models::CoreSimplifiedInvoice.new(
-          :date => self.date,
-          :due_date => self.due_date,
-          :reference=> self.reference,
-          :observations=> self.observations,
-          :retention=> self.retention,
-          :tax_exemption => self.tax_exemption,
-          :sequence_id=> self.sequence_id,
-          :client => self.client,
-          :items => self.items,
-          :mb_reference=> self.mb_reference
-        )
-      end
     end
     
     class Invoice < BaseModel

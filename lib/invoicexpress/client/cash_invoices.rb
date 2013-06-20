@@ -60,7 +60,10 @@ module Invoicexpress
       def update_cash_invoice(invoice, options={})
         raise(ArgumentError, "cash invoice has the wrong type") unless invoice.is_a?(Invoicexpress::Models::CashInvoice)
 
-        params = { :klass => Invoicexpress::Models::CashInvoice, :body  => invoice }
+        if !invoice.id
+          raise ArgumentError, "Sequence ID is required"
+        end
+        params = { :klass => Invoicexpress::Models::CashInvoice, :body  => invoice.to_core }
         put("cash_invoices/#{invoice.id}.xml", params.merge(options))
       end
 

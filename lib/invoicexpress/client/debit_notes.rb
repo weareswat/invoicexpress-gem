@@ -79,7 +79,10 @@ module Invoicexpress
       def update_debit_note(debit_note, options={})
         raise(ArgumentError, "debit note has the wrong type") unless debit_note.is_a?(Invoicexpress::Models::DebitNote)
 
-        params = { :klass => Invoicexpress::Models::DebitNote, :body => debit_note }
+        if !debit_note.id
+          raise ArgumentError, "DebitNote ID is required"
+        end
+        params = { :klass => Invoicexpress::Models::DebitNote, :body => debit_note.to_core }
         put("debit_notes/#{debit_note.id}.xml", params.merge(options))
       end
 

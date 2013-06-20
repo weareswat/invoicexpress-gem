@@ -1,7 +1,7 @@
 # invoiceXpress
 
 Gem for invoicexpress API
-Reference: http://en.invoicexpress.com/api/appendix/clients-country-list/
+Reference: http://en.invoicexpress.com/api/overview/introduction/
 
 ## Dependencies
 
@@ -15,15 +15,15 @@ And pretzels!
 * Client        - 100%
 * Sequences     - 100%
 * Users         - 100%
-* Invoices      - 99%
-* Cash Invoices - 99%
+* Invoices      - 100%
+* Cash Invoices - 100%
 * Items         - 100%
 * Charts        - 100%
-* Debit Notes   - 99%
-* Credit Notes  - 99%
+* Debit Notes   - 100%
+* Credit Notes  - 10%
 * Taxes         - 100%
-* Schedules     - 50%
-* Sim. Invoices - 99%
+* Schedules     - 100%
+* Sim. Invoices - 100%
 * Purch. Orders - 100%
 
 ## Tests
@@ -33,7 +33,8 @@ And pretzels!
 * Users         - 100%
 * Charts        - 100%
 * Taxes         - 100%
-* Schedules     - 60%
+* Schedules     - 100%
+* Invoices      - 100%
 * Sim. Invoices - 100%
 * Credit Notes  - 100%
 * Purch. Orders - 100%
@@ -55,3 +56,7 @@ If using from inside a rails project:
 ### Documentation
 
 We've included docs for all methods. Refer to the client section.
+
+### Examples
+
+The Github wiki has examples for (most) of the methods.

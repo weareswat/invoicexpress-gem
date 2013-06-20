@@ -67,7 +67,22 @@ describe Invoicexpress::Client::PurchaseOrders do
       model = Invoicexpress::Models::PurchaseOrder.new(:id => 1430276)
       expect { @client.update_purchase_order(model) }.to_not raise_error
     end
+
+    it "raises if no purchase is passed" do
+      expect {
+        @client.update_purchase_order(nil)
+      }.to raise_error(ArgumentError)
+    end
+
+    it "raises if the purchase order update has no id" do
+      stub_put("/purchase_orders/.xml").
+        to_return(xml_response("ok.xml"))
+      expect {
+        @client.update_purchase_order(Invoicexpress::Models::PurchaseOrder.new)
+      }.to raise_error(ArgumentError)
+    end
   end
+ 
 
   describe ".update_purchase_order_state" do
     it "updates the state" do

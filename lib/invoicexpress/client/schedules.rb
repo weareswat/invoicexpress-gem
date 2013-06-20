@@ -40,7 +40,6 @@ module Invoicexpress
       # @raise Invoicexpress::NotFound When the schedule doesn't exist
       def schedule(schedule, options={})
         params = { :klass => Invoicexpress::Models::Schedule }
-
         get("schedules/#{id_from_schedule(schedule)}.xml", params.merge(options))
       end
 
@@ -58,11 +57,42 @@ module Invoicexpress
       # @raise Invoicexpress::NotFound When the invoice doesn't exist
       def update_schedule(schedule, options={})
         raise(ArgumentError, "schedule has the wrong type") unless schedule.is_a?(Invoicexpress::Models::Schedule)
-
+        if !schedule.id
+          raise ArgumentError, "Schedule's ID is required"
+        end
         params = { :klass => Invoicexpress::Models::Schedule, :body  => schedule.to_core_schedule() }
         put("schedules/#{schedule.id}.xml", params.merge(options))
       end
       
+
+
+      # Activates a previously deactivated schedule
+      #
+      # @param schedule [Schedule] The schedule to change
+      # @raise Invoicexpress::Unauthorized When the client is unauthorized
+      # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
+      # @raise Invoicexpress::NotFound When the invoice doesn't exist
+      def activate_schedule(schedule, options={})
+        raise(ArgumentError, "schedule has the wrong type") unless schedule.is_a?(Invoicexpress::Models::Schedule)
+
+        params = { :body => schedule, :klass => Invoicexpress::Models::Schedule }
+        put("schedules/#{id_from_schedule(schedule)}/activate", params.merge(options))
+      end
+
+
+      # Deactivates a schedule. No invoices are created while the schedule is deactivated
+      #
+      # @param schedule [Schedule] The schedule to change
+      # @raise Invoicexpress::Unauthorized When the client is unauthorized
+      # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
+      # @raise Invoicexpress::NotFound When the invoice doesn't exist
+      def deactivate_schedule(schedule, options={})
+        raise(ArgumentError, "schedule has the wrong type") unless schedule.is_a?(Invoicexpress::Models::Schedule)
+
+        params = { :body => schedule, :klass => Invoicexpress::Models::Schedule }
+        put("schedules/#{id_from_schedule(schedule)}/deactivate", params.merge(options))
+      end
+
       private
       def id_from_schedule(item)
         if item.is_a?(Invoicexpress::Models::Schedule)

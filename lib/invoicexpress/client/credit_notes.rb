@@ -78,8 +78,10 @@ module Invoicexpress
       # @raise Invoicexpress::NotFound When the credit note doesn't exist
       def update_credit_note(credit_note, options={})
         raise(ArgumentError, "credit note has the wrong type") unless credit_note.is_a?(Invoicexpress::Models::CreditNote)
-
-        params = { :klass => Invoicexpress::Models::CreditNote, :body => credit_note }
+        if !credit_note.id
+          raise ArgumentError, "CreditNote ID is required"
+        end
+        params = { :klass => Invoicexpress::Models::CreditNote, :body => credit_note.to_core }
         put("credit_notes/#{credit_note.id}.xml", params.merge(options))
       end
 
