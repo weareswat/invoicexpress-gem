@@ -74,10 +74,32 @@ module Invoicexpress
         end
       end
     end
-
+    
+    # Note: we need all of these models because the API crashes when we send an object with the fields from the get request.
+    # example: do a get and then a update.
     class CoreSimplifiedInvoice < BaseModel
       include BaseInvoice
       tag 'simplified_invoice'
+    end
+
+    class CoreInvoice < BaseModel
+      include BaseInvoice
+      tag 'invoice'
+    end
+
+    class CoreCashInvoice < BaseModel
+      include BaseInvoice
+      tag 'cash_invoice'
+    end
+
+    class CoreCreditNote < BaseModel
+      include BaseInvoice
+      tag 'credit_note'
+    end
+
+    class CoreDebitNote < BaseModel
+      include BaseInvoice
+      tag 'debit_note'
     end
 
     class SimplifiedInvoice < BaseModel
