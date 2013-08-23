@@ -1,4 +1,4 @@
-# invoiceXpress
+# invoiceXpress GEM
 
 Gem for invoicexpress API
 Reference: http://en.invoicexpress.com/api/overview/introduction/
@@ -20,7 +20,7 @@ And pretzels!
 * Items         - 100%
 * Charts        - 100%
 * Debit Notes   - 100%
-* Credit Notes  - 10%
+* Credit Notes  - 100%
 * Taxes         - 100%
 * Schedules     - 100%
 * Sim. Invoices - 100%
@@ -320,4 +320,3 @@ To update a schedule we need to pass these fields.
           ]
         )
         purchase_order = @client.create_purchase_order(purchase_order)
-
