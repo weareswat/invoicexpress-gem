@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday_middleware', '~> 0.9'
   spec.add_dependency 'happymapper', '~> 0.4'
 
-  spec.authors = ["Ruben Fonseca"]
+  spec.authors = ["Think Orange"]
   spec.description = %q{Simple wrapper for invoicexpress.com API}
-  spec.email = ['ruben.fonseca@thinkorange.pt']
+  spec.email = ['info@thinkorange.pt']
   spec.files = %w(CHANGELOG.md README.md Rakefile invoicexpress.gemspec)
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("spec/**/*")
