@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<accounts>
+  <account>
+    <id>13233</id>
+    <name>thinkorangeteste</name>
+    <url>https://thinkorangeteste.invoicexpress.net</url>
+    <api_key>xptoxpto</api_key>
+    <state>active</state>
+    <blocked>false</blocked>
+  </account>
+</accounts>

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<top-debtors>
+  <currency>€</currency>
+  <client>
+    <id>393116</id>
+    <name>Ruben Fonseca</name>
+    <balance>60.0</balance>
+    <fiscal_id/>
+  </client>
+</top-debtors>

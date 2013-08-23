@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplified_invoices>
+  <results>
+    <current_page>1</current_page>
+    <entries>2</entries>
+    <total_entries>2</total_entries>
+  </results>
+  <simplified_invoice>
+    <id>1425061</id>
+    <status>settled</status>
+    <archived>false</archived>
+    <type>SimplifiedInvoice</type>
+    <sequence_number>1/2013</sequence_number>
+    <date>01/05/2013</date>
+    <reference></reference>
+    <observations>Artigo 16&#186; n&#186; 6 do CIVA. </observations>
+    <retention></retention>
+    <permalink>http://www.invoicexpress.net/documents/9c21e2aa2fd5a9f999673bc993407a562177fecb</permalink>
+    <client>
+      <id>550611</id>
+      <name>Pedro Sousa</name>
+      <email>psousa@thinkorange.pt</email>
+      <address>Rua Luisa de Cam&#245;es 18</address>
+      <postal_code>1231-123</postal_code>
+      <country>Portugal</country>
+      <fiscal_id>210533382</fiscal_id>
+    </client>
+    <currency>Euro</currency>
+    <items type="array">
+      <item>
+        <name>Item 1</name>
+        <description></description>
+        <unit_price>60.0</unit_price>
+        <unit>unit</unit>
+        <quantity>2.0</quantity>
+        <tax>
+          <name></name>
+          <value>0.0</value>
+        </tax>
+        <discount>0.0</discount>
+      </item>
+      <item>
+        <name>Item 2</name>
+        <description></description>
+        <unit_price>50.0</unit_price>
+        <unit>unit</unit>
+        <quantity>1.0</quantity>
+        <tax>
+          <name></name>
+          <value>0.0</value>
+        </tax>
+        <discount>0.0</discount>
+      </item>
+    </items>
+    <sum>170.0</sum>
+    <discount>0.0</discount>
+    <before_taxes>170.0</before_taxes>
+    <taxes>0.0</taxes>
+    <total>170.0</total>
+  </simplified_invoice>
+  <simplified_invoice>
+    <id>1425061</id>
+    <status>settled</status>
+    <archived>false</archived>
+    <type>SimplifiedInvoice</type>
+    <sequence_number>1/2013</sequence_number>
+    <date>01/05/2013</date>
+    <reference></reference>
+    <observations>Artigo 16&#186; n&#186; 6 do CIVA. </observations>
+    <retention></retention>
+    <permalink>http://www.invoicexpress.net/documents/9c21e2aa2fd5a9f999673bc993407a562177fecb</permalink>
+    <client>
+      <id>550611</id>
+      <name>Pedro Sousa</name>
+      <email>psousa@thinkorange.pt</email>
+      <address>Rua Luisa de Cam&#245;es 18</address>
+      <postal_code>1231-123</postal_code>
+      <country>Portugal</country>
+      <fiscal_id>210533382</fiscal_id>
+    </client>
+    <currency>Euro</currency>
+    <items type="array">
+      <item>
+        <name>Item 1</name>
+        <description></description>
+        <unit_price>60.0</unit_price>
+        <unit>unit</unit>
+        <quantity>2.0</quantity>
+        <tax>
+          <name></name>
+          <value>0.0</value>
+        </tax>
+        <discount>0.0</discount>
+      </item>
+      <item>
+        <name>Item 2</name>
+        <description></description>
+        <unit_price>50.0</unit_price>
+        <unit>unit</unit>
+        <quantity>1.0</quantity>
+        <tax>
+          <name></name>
+          <value>0.0</value>
+        </tax>
+        <discount>0.0</discount>
+      </item>
+    </items>
+    <sum>170.0</sum>
+    <discount>0.0</discount>
+    <before_taxes>170.0</before_taxes>
+    <taxes>0.0</taxes>
+    <total>170.0</total>
+  </simplified_invoice>
+</simplified_invoices>

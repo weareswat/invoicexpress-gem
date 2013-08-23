@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.5
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1 id="invoicexpress">invoiceXpress</h1>
+
+<p>Gem for invoicexpress API
+Reference: http://en.invoicexpress.com/api/overview/introduction/</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>Run bundle, the project should need:
+Happymapper
+Faraday
+And pretzels!</p>
+
+<h2 id="progress">Progress</h2>
+
+<ul>
+  <li>Client        - 100%</li>
+  <li>Sequences     - 100%</li>
+  <li>Users         - 100%</li>
+  <li>Invoices      - 100%</li>
+  <li>Cash Invoices - 100%</li>
+  <li>Items         - 100%</li>
+  <li>Charts        - 100%</li>
+  <li>Debit Notes   - 100%</li>
+  <li>Credit Notes  - 10%</li>
+  <li>Taxes         - 100%</li>
+  <li>Schedules     - 100%</li>
+  <li>Sim. Invoices - 100%</li>
+  <li>Purch. Orders - 100%</li>
+</ul>
+
+<h2 id="tests">Tests</h2>
+
+<ul>
+  <li>Client        - 100%</li>
+  <li>Sequences     - 100%</li>
+  <li>Users         - 100%</li>
+  <li>Charts        - 100%</li>
+  <li>Taxes         - 100%</li>
+  <li>Schedules     - 100%</li>
+  <li>Invoices      - 100%</li>
+  <li>Sim. Invoices - 100%</li>
+  <li>Credit Notes  - 100%</li>
+  <li>Purch. Orders - 100%</li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<p>If using from inside a rails project:
+    require &#8216;invoicexpress&#8217;</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_client'>client</span> <span class='op'>=</span> <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+  <span class='symbol'>:screen_name</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yourusername</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='symbol'>:api_key</span>     <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>yourapikey</span><span class='tstring_end'>&quot;</span></span>
+<span class='rparen'>)</span>
+
+<span class='id identifier rubyid_invoices'>invoices</span>  <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_invoices'>invoices</span>
+<span class='id identifier rubyid_invoice'>invoice</span>   <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_invoice'>invoice</span><span class='lparen'>(</span><span class='int'>1042320</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_chart'>chart</span>  <span class='op'>=</span> <span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_treasury_chart'>treasury_chart</span>
+</code></pre>
+
+<h3 id="documentation">Documentation</h3>
+
+<p>We&#8217;ve included docs for all methods. Refer to the client section.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>The Github wiki has examples for (most) of the methods.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Jun 20 18:40:53 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

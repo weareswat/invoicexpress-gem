@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<clients>
+  <client>
+    <id>393116</id>
+    <name>Ruben Fonseca</name>
+    <email>fonseka@gmail.com</email>
+    <address/>
+    <postal_code/>
+    <fiscal_id/>
+    <website/>
+    <phone/>
+    <fax/>
+    <preferred_contact>
+    </preferred_contact>
+    <observations/>
+    <send_options/>
+  </client>
+</clients>
