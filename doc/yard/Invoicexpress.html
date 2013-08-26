@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Invoicexpress
+  
+    &mdash; Documentation by YARD 0.8.5
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (I)</a> &raquo;
+    
+    
+    <span class="title">Invoicexpress</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Invoicexpress
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+      <dt class="r1">Extended by:</dt>
+      <dd class="r1"><span class='object_link'><a href="Invoicexpress/Configuration.html" title="Invoicexpress::Configuration (module)">Configuration</a></span></dd>
+      
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/invoicexpress.rb<span class="defines">,<br />
+  lib/invoicexpress/error.rb,<br /> lib/invoicexpress/models.rb,<br /> lib/invoicexpress/client.rb,<br /> lib/invoicexpress/version.rb,<br /> lib/invoicexpress/request.rb,<br /> lib/invoicexpress/connection.rb,<br /> lib/invoicexpress/models/user.rb,<br /> lib/invoicexpress/client/items.rb,<br /> lib/invoicexpress/client/taxes.rb,<br /> lib/invoicexpress/models/chart.rb,<br /> lib/invoicexpress/client/users.rb,<br /> lib/invoicexpress/client/charts.rb,<br /> lib/invoicexpress/models/filter.rb,<br /> lib/invoicexpress/configuration.rb,<br /> lib/invoicexpress/models/client.rb,<br /> lib/invoicexpress/client/clients.rb,<br /> lib/invoicexpress/models/invoice.rb,<br /> lib/invoicexpress/authentication.rb,<br /> lib/invoicexpress/client/invoices.rb,<br /> lib/invoicexpress/models/sequence.rb,<br /> lib/invoicexpress/models/supplier.rb,<br /> lib/invoicexpress/models/schedule.rb,<br /> lib/invoicexpress/client/sequences.rb,<br /> lib/invoicexpress/client/schedules.rb,<br /> lib/invoicexpress/models/top_client.rb,<br /> lib/invoicexpress/models/top_debtor.rb,<br /> lib/invoicexpress/client/debit_notes.rb,<br /> lib/invoicexpress/client/credit_notes.rb,<br /> lib/invoicexpress/client/cash_invoices.rb,<br /> lib/invoicexpress/models/purchase_order.rb,<br /> lib/invoicexpress/client/purchase_orders.rb,<br /> lib/invoicexpress/models/quarterly_result.rb,<br /> lib/invoicexpress/client/simplified_invoices.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Invoicexpress/Authentication.html" title="Invoicexpress::Authentication (module)">Authentication</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html" title="Invoicexpress::Configuration (module)">Configuration</a></span>, <span class='object_link'><a href="Invoicexpress/Connection.html" title="Invoicexpress::Connection (module)">Connection</a></span>, <span class='object_link'><a href="Invoicexpress/Models.html" title="Invoicexpress::Models (module)">Models</a></span>, <span class='object_link'><a href="Invoicexpress/Request.html" title="Invoicexpress::Request (module)">Request</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Invoicexpress/Client.html" title="Invoicexpress::Client (class)">Client</a></span>, <span class='object_link'><a href="Invoicexpress/Error.html" title="Invoicexpress::Error (class)">Error</a></span>, <span class='object_link'><a href="Invoicexpress/InternalServerError.html" title="Invoicexpress::InternalServerError (class)">InternalServerError</a></span>, <span class='object_link'><a href="Invoicexpress/NotFound.html" title="Invoicexpress::NotFound (class)">NotFound</a></span>, <span class='object_link'><a href="Invoicexpress/Unauthorized.html" title="Invoicexpress::Unauthorized (class)">Unauthorized</a></span>, <span class='object_link'><a href="Invoicexpress/UnprocessableEntity.html" title="Invoicexpress::UnprocessableEntity (class)">UnprocessableEntity</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="VERSION-constant" class="">VERSION =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0.0.0</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+  
+  
+  <h3 class="inherited">Constants included
+     from <span class='object_link'><a href="Invoicexpress/Configuration.html" title="Invoicexpress::Configuration (module)">Configuration</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Invoicexpress/Configuration.html#DEFAULT_ADAPTER-constant" title="Invoicexpress::Configuration::DEFAULT_ADAPTER (constant)">Configuration::DEFAULT_ADAPTER</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#DEFAULT_API_ENDPOINT-constant" title="Invoicexpress::Configuration::DEFAULT_API_ENDPOINT (constant)">Configuration::DEFAULT_API_ENDPOINT</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#DEFAULT_USER_AGENT-constant" title="Invoicexpress::Configuration::DEFAULT_USER_AGENT (constant)">Configuration::DEFAULT_USER_AGENT</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#VALID_OPTIONS_KEYS-constant" title="Invoicexpress::Configuration::VALID_OPTIONS_KEYS (constant)">Configuration::VALID_OPTIONS_KEYS</a></span></p>
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-class_method" title="method_missing (class method)">+ (Object) <strong>method_missing</strong>(method, *args, &amp;block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Delegate to Octokit::Client.new.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new-class_method" title="new (class method)">+ (Invoicexpress::Client) <strong>new</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Alias for Invoicexpress::Client.new.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#respond_to%3F-class_method" title="respond_to? (class method)">+ (Boolean) <strong>respond_to?</strong>(method, include_private = false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Invoicexpress/Configuration.html" title="Invoicexpress::Configuration (module)">Configuration</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Invoicexpress/Configuration.html#api_endpoint%3D-instance_method" title="Invoicexpress::Configuration#api_endpoint= (method)">api_endpoint=</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#configure-instance_method" title="Invoicexpress::Configuration#configure (method)">configure</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#extended-class_method" title="Invoicexpress::Configuration.extended (method)">extended</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#faraday_config-instance_method" title="Invoicexpress::Configuration#faraday_config (method)">faraday_config</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#options-instance_method" title="Invoicexpress::Configuration#options (method)">options</a></span>, <span class='object_link'><a href="Invoicexpress/Configuration.html#reset-instance_method" title="Invoicexpress::Configuration#reset (method)">reset</a></span></p>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="method_missing-class_method">
+  
+    + (<tt>Object</tt>) <strong>method_missing</strong>(method, *args, &amp;block) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Delegate to Octokit::Client.new</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>super</span> <span class='kw'>unless</span> <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new-class_method">
+  
+    + (<tt><span class='object_link'><a href="Invoicexpress/Client.html" title="Invoicexpress::Client (class)">Invoicexpress::Client</a></span></tt>) <strong>new</strong>(options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Alias for Invoicexpress::Client.new</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Invoicexpress/Client.html" title="Invoicexpress::Client (class)">Invoicexpress::Client</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='const'>Invoicexpress</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>respond_to?</strong>(method, include_private = false) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/invoicexpress.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Jun 20 18:40:53 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<client>
+  <id>345</id>
+  <name>Bruce Norris</name>
+  <code>1337</code>
+  <email>foo@bar.com</email>
+  <address>Badgad</address>
+  <postal_code>123-456</postal_code>
+  <fiscal_id>1122331122</fiscal_id>
+  <website>www.brucenorris.com</website>
+  <phone>4433551242</phone>
+  <fax>4433551243</fax>
+  <preferred_contact>
+    <name>Rui Alves</name>
+    <email>xpto@xpto.pt</email>
+    <phone>4433551242</phone>
+  </preferred_contact>
+  <observations>Computer Processed</observations>
+  <send_options>1</send_options>
+  <!-- 1 - Original -->
+</client>

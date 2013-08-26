@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<message>
+  <client>
+    <name>Pedro Sousa</name>
+    <email>psousa@thinkorange.pt</email>
+  </client>
+  <subject>Hello world</subject>
+  <body>Here is the invoice.</body>
+</message>

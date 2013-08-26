@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxes>
+ <tax>
+  <id>1</id>
+  <name>IVA20</name>
+  <value>20</value>
+  <region>PT</region>
+  <default_tax>1</default_tax>
+  <!-- default tax -->
+ </tax>
+ <tax>
+  <id>2</id>
+  <name>IVA21</name>
+  <value>21</value>
+  <region>PT</region>
+  <default_tax>0</default_tax>
+ </tax>
+</taxes>

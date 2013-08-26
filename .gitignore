@@ -11,8 +11,7 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-
-# YARD artifacts
+*.DS_Store
+Gemfile.lock
 .yardoc
 _yardoc
-doc/
