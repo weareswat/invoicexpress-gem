@@ -73,6 +73,7 @@ module Invoicexpress
           element :taxes, Float
           element :total, Float
           element :mb_reference, Integer
+          element :permalink, String
         end
       end
       
