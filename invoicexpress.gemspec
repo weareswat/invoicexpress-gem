@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.files = %w(CHANGELOG.md README.md Rakefile invoicexpress.gemspec)
   spec.files += Dir.glob("lib/**/*.rb")
   spec.files += Dir.glob("spec/**/*")
-  spec.homepage = "http://invoicexpress.pt"
+  spec.homepage = "http://www.invoicexpress.net"
   spec.licenses = ['MIT']
   spec.name = 'invoicexpress'
   spec.require_paths = ['lib']
