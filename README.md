@@ -1,14 +1,15 @@
 # invoiceXpress GEM
 
-Gem for invoicexpress API
-Reference: http://en.invoicexpress.com/api/overview/introduction/
+Gem for invoicexpress API at http://invoicexpress.com
+Created with Reference: http://en.invoicexpress.com/api/overview/introduction/
 
 ## Dependencies
 
 Run bundle, the project should need:
-Happymapper
-Faraday
-And pretzels!
+* Invoicexpress API Key
+* Happymapper
+* Faraday
+* And pretzels!
 
 ## Progress
 
