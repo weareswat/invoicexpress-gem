@@ -56,7 +56,7 @@ def invoicexpress_url(url)
   if url =~ /^http/
     url
   else
-    "https://thinkorangeteste.invoicexpress.net#{url}"
+    "https://thinkorangeteste.app.invoicexpress.com#{url}"
   end
 end
 

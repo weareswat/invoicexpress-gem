@@ -1,5 +1,8 @@
+# Version 0.1.4
+Added language field to client. API endpoint now defaults to https://%s.app.invoicexpress.com/
+
 # Version 0.1.3
-Removed "rquire 'pry'". Fixed for production.
+Removed "rquire 'pry'". Fixed it for production.
 
 # Version 0.1.2
 Corrected information in gem.
