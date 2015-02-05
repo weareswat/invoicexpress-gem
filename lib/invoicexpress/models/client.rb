@@ -18,6 +18,7 @@ module Invoicexpress
       element :send_options, Integer
       element :balance, Float
       element :country, String
+      element :language, String
     end
 
   end
