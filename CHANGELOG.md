@@ -1,4 +1,7 @@
-# Version 0.1.4
+# Version 0.1.5
+Added rate to invoice. Experimental.
+
+# Version 0.1.4.1
 Added language field to client. API endpoint now defaults to https://%s.app.invoicexpress.com/
 
 # Version 0.1.3
