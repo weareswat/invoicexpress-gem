@@ -1,3 +1,6 @@
+# Version 0.1.6.1
+Renamed the invoice_email method to email_invoice for sending email. Extracted examples to own file.
+
 # Version 0.1.6
 Fixed url for send email. New url: http://invoicexpress.com/api/invoices/email-invoice
 
