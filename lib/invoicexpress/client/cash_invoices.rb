@@ -91,19 +91,6 @@ module Invoicexpress
         put("cash_invoices/#{invoice_id}/change-state.xml", params.merge(options))
       end
 
-      # Sends the invoice by email
-      #
-      # @param invoice_id [String] The cash invoice id to change
-      # @param message [Invoicexpress::Models::Message] The message to send
-      # @raise Invoicexpress::Unauthorized When the client is unauthorized
-      # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
-      # @raise Invoicexpress::NotFound When the invoice doesn't exist
-      def invoice_email(invoice_id, message, options={})
-        raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
-
-        params = { :body => message, :klass => Invoicexpress::Models::CashInvoice }
-        put("cash_invoices/#{invoice_id}/email-document.xml", params.merge(options))
-      end
 
     end
   end

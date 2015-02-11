@@ -99,8 +99,10 @@ module Invoicexpress
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
         params = { :body => message, :klass => Invoicexpress::Models::Invoice }
-        put("invoices/#{invoice_id}/email-invoice.xml", params.merge(options))
+        put("invoice/#{invoice_id}/email-invoice.xml", params.merge(options))
       end
+
+    
 
     end
   end

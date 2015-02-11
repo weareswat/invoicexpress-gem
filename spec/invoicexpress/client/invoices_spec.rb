@@ -94,7 +94,7 @@ describe Invoicexpress::Client::Invoices do
  
   describe ".invoice_mail" do
     it "sends the invoice through email" do
-      stub_put("/invoices/1503698/email-invoice.xml").
+      stub_put("/invoice/1503698/email-invoice.xml").
         to_return(xml_response("ok.xml"))
       message = Invoicexpress::Models::Message.new(
         :subject => "Hello world",

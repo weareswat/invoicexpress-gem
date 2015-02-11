@@ -1,3 +1,6 @@
+# Version 0.1.6
+Fixed url for send email. New url: http://invoicexpress.com/api/invoices/email-invoice
+
 # Version 0.1.5
 Added rate to invoice. Experimental.
 
