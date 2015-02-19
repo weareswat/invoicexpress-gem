@@ -1,5 +1,7 @@
 # invoiceXpress GEM
 
+[![Build Status](https://travis-ci.org/weareswat/invoicexpress-gem.svg)](https://travis-ci.org/weareswat/invoicexpress-gem)
+
 Gem for invoicexpress API at http://invoicexpress.com
 Created with Reference: http://en.invoicexpress.com/api/overview/introduction/
 
