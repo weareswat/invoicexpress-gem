@@ -1,3 +1,7 @@
+# Version 0.1.7
+Fix issue #7 - Wrong return type of Modes::Item#tax
+Added Travis
+
 # Version 0.1.6.1
 Renamed the invoice_email method to email_invoice for sending email. Extracted examples to own file.
 
