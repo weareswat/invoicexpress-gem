@@ -1,6 +1,10 @@
 # invoiceXpress GEM
 
 Gem for invoicexpress API v1 at http://invoicexpress.com
+
+[![Gem Version](https://badge.fury.io/rb/invoicexpress.svg)](http://badge.fury.io/rb/invoicexpress) [![Build Status](https://travis-ci.org/weareswat/invoicexpress-gem.svg)](https://travis-ci.org/weareswat/invoicexpress-gem) [![Code Climate](https://codeclimate.com/github/weareswat/invoicexpress-gem/badges/gpa.svg)](https://codeclimate.com/github/weareswat/invoicexpress-gem)
+
+Gem for invoicexpress API at http://invoicexpress.com
 Created with Reference: http://en.invoicexpress.com/api/overview/introduction/
 
 ## Dependencies
@@ -56,3 +60,4 @@ If using from inside a rails project use:
     )
 
 Examples for API are located in the EXAMPLES.md file.
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item>
+  <name>Test</name>
+  <description></description>
+  <unit_price>0.0</unit_price>
+  <unit>hour</unit>
+  <tax>
+    <name>IVA23</name>
+    <value>23.0</value>
+  </tax>
+</item>

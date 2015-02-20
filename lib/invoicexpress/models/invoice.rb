@@ -24,7 +24,7 @@ module Invoicexpress
       element :unit_price, Float
       element :quantity, Float
       element :unit, String
-      element :tax, Tax
+      has_one :tax, Tax
       element :discount, Float
     end
 
@@ -77,6 +77,7 @@ module Invoicexpress
           element :taxes, Float
           element :total, Float
           element :mb_reference, Integer
+          element :permalink, String
         end
       end
       
