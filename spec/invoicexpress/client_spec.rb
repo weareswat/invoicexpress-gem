@@ -6,19 +6,19 @@ describe Invoicexpress::Client do
   end
 
   describe "api_endpoint" do
-    after(:each) do 
+    after(:each) do
       Invoicexpress.reset
     end
 
-    it "defauls to https://%s.invoicexpress.net" do
+    it "defaults to https://%s.app.invoicexpress.com/" do
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://%s.invoicexpress.net/"
+      client.api_endpoint.should == "https://%s.app.invoicexpress.com/"
     end
 
     it "is set" do
-      Invoicexpress.api_endpoint = "https://thinkorangeteste.invoicexpress.net/"
+      Invoicexpress.api_endpoint = "https://thinkorangeteste.app.invoicexpress.com/"
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://thinkorangeteste.invoicexpress.net/"
+      client.api_endpoint.should == "https://thinkorangeteste.app.invoicexpress.com/"
     end
   end
 end

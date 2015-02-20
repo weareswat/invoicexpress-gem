@@ -1,5 +1,5 @@
 require 'faraday'
-# require 'pry'
+#require 'pry'
 
 # @api private
 module Faraday

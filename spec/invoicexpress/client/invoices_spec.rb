@@ -92,9 +92,9 @@ describe Invoicexpress::Client::Invoices do
     end
   end
  
-  describe ".invoice_mail" do
+  describe ".email_invoice" do
     it "sends the invoice through email" do
-      stub_put("/invoices/1503698/email-invoice.xml").
+      stub_put("/invoice/1503698/email-invoice.xml").
         to_return(xml_response("ok.xml"))
       message = Invoicexpress::Models::Message.new(
         :subject => "Hello world",
@@ -104,7 +104,7 @@ describe Invoicexpress::Client::Invoices do
           :email=> 'info@thinkorange.pt'
         )
       )
-      expect { @client.invoice_mail(1503698, message) }.to_not raise_error
+      expect { @client.email_invoice(1503698, message) }.to_not raise_error
     end
   end
 end

@@ -52,6 +52,10 @@ module Invoicexpress
           element :tax_exemption, String
           element :sequence_id, Integer
           element :mb_reference, String
+
+          element :rate, String
+          element :currency_code, String
+
           has_one :client, Client
           has_many :items, Item, :on_save => Proc.new { |value|
             Items.new(:items => value)

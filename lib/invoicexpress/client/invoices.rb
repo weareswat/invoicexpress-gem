@@ -95,12 +95,18 @@ module Invoicexpress
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
       # @raise Invoicexpress::NotFound When the invoice doesn't exist
-      def invoice_mail(invoice_id, message, options={})
+      def email_invoice(invoice_id, message, options={})
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
         params = { :body => message, :klass => Invoicexpress::Models::Invoice }
-        put("invoices/#{invoice_id}/email-invoice.xml", params.merge(options))
+        put("invoice/#{invoice_id}/email-invoice.xml", params.merge(options))
       end
+
+      #deprecated
+      def invoice_email(invoice_id, message, options={})
+        email_invoice(invoice_id, message, options)
+      end
+
 
     end
   end
