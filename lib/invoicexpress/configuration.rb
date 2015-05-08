@@ -15,7 +15,7 @@ module Invoicexpress
 
     DEFAULT_ADAPTER = Faraday.default_adapter
     DEFAULT_API_ENDPOINT = ENV['INVOICEXPRESS_API_ENDPOINT'] || 'https://%s.app.invoicexpress.com/'
-    DEFAULT_USER_AGENT = "Invoicexpress Ruby Gem #{Invoicexpress::VERSION}".freeze
+    DEFAULT_USER_AGENT = "InvoiceXpress Ruby Gem #{Invoicexpress::VERSION}".freeze
 
     attr_accessor(*VALID_OPTIONS_KEYS)
 

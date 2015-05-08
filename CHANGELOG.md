@@ -1,3 +1,9 @@
+# Version 0.1.9
+Added Invoice Receipt
+
+# Version 0.1.8
+Added supplier model
+
 # Version 0.1.7
 Fix issue #7 - Wrong return type of Modes::Item#tax
 Added Travis

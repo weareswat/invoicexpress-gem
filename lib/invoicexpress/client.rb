@@ -17,6 +17,7 @@ require 'invoicexpress/client/purchase_orders'
 require 'invoicexpress/client/debit_notes'
 require 'invoicexpress/client/credit_notes'
 require 'invoicexpress/client/simplified_invoices'
+require 'invoicexpress/client/invoice_receipts'
 
 
 module Invoicexpress
@@ -51,6 +52,7 @@ module Invoicexpress
     include Invoicexpress::Client::DebitNotes
     include Invoicexpress::Client::CreditNotes
     include Invoicexpress::Client::SimplifiedInvoices
+    include Invoicexpress::Client::InvoiceReceipts
     
   end
 end

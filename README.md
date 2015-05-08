@@ -30,6 +30,7 @@ Run bundle, the project should need:
 * Schedules     - 100%
 * Sim. Invoices - 100%
 * Purch. Orders - 100%
+* Invoice Receipts - 100%
 
 ## Tests
 
@@ -43,7 +44,8 @@ Run bundle, the project should need:
 * Sim. Invoices - 100%
 * Credit Notes  - 100%
 * Purch. Orders - 100%
- 
+* Inv. Receipts - 0%
+
 ## Documentation
 
 We've included docs for all methods. Refer to the doc folder and client section.
