@@ -112,12 +112,12 @@ module Invoicexpress
 
       # Sends the invoice receipt through email
       #
-      # @param invoice_receipt_id [String] The simplified invoice id to send
+      # @param invoice_receipt_id [String] The invoice receipt id to send
       # @param message [Invoicexpress::Models::Message] The message to send
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
-      # @raise Invoicexpress::NotFound When the simplified invoice doesn't exist
-      def simplified_invoice_mail(invoice_receipt_id, message, options={})
+      # @raise Invoicexpress::NotFound When the invoice receipt doesn't exist
+      def invoice_receipt_mail(invoice_receipt_id, message, options={})
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
         params = { :body => message, :klass => Invoicexpress::Models::InvoiceReceipt }
