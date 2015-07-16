@@ -156,6 +156,7 @@ module Invoicexpress
       include BaseInvoice
       include ExtraInvoice
       tag 'credit_note'
+      element :owner_invoice_id, Integer
     end
 
     class DebitNote < BaseModel
