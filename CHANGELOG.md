@@ -1,3 +1,6 @@
+#Version 0.1.8
+Added city field to client.
+
 # Version 0.1.7
 Fix issue #7 - Wrong return type of Modes::Item#tax
 Added Travis
