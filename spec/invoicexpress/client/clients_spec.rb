@@ -15,6 +15,7 @@ describe Invoicexpress::Client::Clients do
       list.count.should == 1
       list.first.name.should == "Ruben Fonseca"
       list.first.email.should == "fonseka@gmail.com"
+      list.first.city.should == "Lisboa"
     end
   end
 
@@ -25,12 +26,14 @@ describe Invoicexpress::Client::Clients do
 
       model_client = Invoicexpress::Models::Client.new({
         :name => "Ruben Fonseca",
-        :email => "fonseka@gmail.com"
+        :email => "fonseka@gmail.com",
+        :city => "Lisboa"
       })
 
       new_client = @client.create_client(model_client)
       new_client.name.should == "Ruben Fonseca"
       new_client.email.should == "fonseka@gmail.com"
+      new_client.city.should == "Lisboa"
     end
 
     it "raises if no client is passed" do
