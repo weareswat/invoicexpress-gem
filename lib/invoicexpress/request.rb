@@ -57,7 +57,13 @@ module Invoicexpress
       end
 
       response
-    end
+    rescue Faraday::ConnectionFailed => e
+      unless e.message.match(/getaddrinfo/).nil?
+        raise Invoicexpress::BadAddress.new,
+          "Did you forget to set your account_name? Error: #{e.message}"
+      end
 
+      raise e
+    end
   end
 end
