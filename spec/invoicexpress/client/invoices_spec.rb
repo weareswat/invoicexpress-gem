@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::Invoices do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".invoices" do
@@ -21,7 +21,7 @@ describe Invoicexpress::Client::Invoices do
       stub_post("/invoices.xml").
         to_return(xml_response("invoices.create.xml"))
 
-      
+
       object = Invoicexpress::Models::Invoice.new(
         :date => Date.new(2013, 6, 18),
         :due_date => Date.new(2013, 6, 18),
@@ -79,7 +79,7 @@ describe Invoicexpress::Client::Invoices do
       }.to raise_error(ArgumentError)
     end
   end
- 
+
   describe ".update_invoice_state" do
     it "updates the state" do
       stub_put("/invoices/1503698/change-state.xml").
@@ -91,7 +91,7 @@ describe Invoicexpress::Client::Invoices do
       expect { @client.update_invoice_state(1503698, state) }.to_not raise_error
     end
   end
- 
+
   describe ".email_invoice" do
     it "sends the invoice through email" do
       stub_put("/invoice/1503698/email-invoice.xml").

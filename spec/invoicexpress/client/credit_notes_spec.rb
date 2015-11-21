@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::CreditNotes do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".credit_notes" do
@@ -21,7 +21,7 @@ describe Invoicexpress::Client::CreditNotes do
       stub_post("/credit_notes.xml").
         to_return(xml_response("credit_notes.create.xml"))
 
-      
+
       cnote = Invoicexpress::Models::CreditNote.new(
         :date => Date.new(2013, 5, 1),
         :due_date => Date.new(2013, 6, 1),
@@ -84,7 +84,7 @@ describe Invoicexpress::Client::CreditNotes do
       expect { cnote = @client.update_credit_note_state(1423940, state) }.to_not raise_error
     end
   end
- 
+
   describe ".credit_note_mail" do
     it "sends the credit note through email" do
       stub_put("/credit_notes/1423940/email-document.xml").

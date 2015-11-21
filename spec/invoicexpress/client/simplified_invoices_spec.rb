@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::SimplifiedInvoices do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".simplified_invoices" do
@@ -21,7 +21,7 @@ describe Invoicexpress::Client::SimplifiedInvoices do
       stub_post("/simplified_invoices.xml").
         to_return(xml_response("simplified_invoices.create.xml"))
 
-      
+
       object = Invoicexpress::Models::SimplifiedInvoice.new(
         :date => Date.new(2013, 5, 1),
         :due_date => Date.new(2013, 6, 1),
@@ -84,7 +84,7 @@ describe Invoicexpress::Client::SimplifiedInvoices do
       }.to raise_error(ArgumentError)
     end
   end
- 
+
   describe ".update_simplified_invoice_state" do
     it "updates the state" do
       stub_put("/simplified_invoices/1425061/change-state.xml").
@@ -96,7 +96,7 @@ describe Invoicexpress::Client::SimplifiedInvoices do
       expect { item = @client.update_simplified_invoice_state(1425061, state) }.to_not raise_error
     end
   end
- 
+
   describe ".simplified_invoice_mail" do
     it "sends the invoice through email" do
       stub_put("/simplified_invoices/1425061/email-document.xml").

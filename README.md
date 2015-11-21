@@ -41,7 +41,7 @@ Run bundle, the project should need:
 * Sim. Invoices - 100%
 * Credit Notes  - 100%
 * Purch. Orders - 100%
- 
+
 ## Documentation
 
 We've included docs for all methods. Refer to the doc folder and client section.
@@ -51,9 +51,9 @@ We've included docs for all methods. Refer to the doc folder and client section.
 If using from inside a rails project use:
 
     require 'invoicexpress'
- 
+
     client = Invoicexpress::Client.new(
-      :screen_name => "yourusername",
+      :account_name => "yourusername",
       :api_key     => "yourapikey"
     )
 
