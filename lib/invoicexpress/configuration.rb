@@ -8,6 +8,7 @@ module Invoicexpress
       :faraday_config_block,
       :api_endpoint,
       :account_name,
+      :screen_name,
       :proxy,
       :api_key,
       :user_agent
@@ -44,7 +45,8 @@ module Invoicexpress
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.user_agent   = DEFAULT_USER_AGENT
       self.api_key      = nil
-      self.account_name  = nil
+      self.account_name = nil
+      self.screen_name  = nil
       self.proxy        = nil
     end
   end

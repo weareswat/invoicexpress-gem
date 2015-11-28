@@ -34,7 +34,7 @@ module Invoicexpress
 
     def request(method, path, options={})
       token = options.delete(:api_key)  || api_key
-      url   = options.delete(:endpoint) || (api_endpoint % account_name)
+      url   = options.delete(:endpoint) || (api_endpoint % account_domain)
       klass = options.delete(:klass) || raise(ArgumentError, "Need a HappyMapper class to parse")
 
       conn_options = {
@@ -64,6 +64,10 @@ module Invoicexpress
       end
 
       raise e
+    end
+
+    def account_domain
+      account_name || screen_name
     end
   end
 end

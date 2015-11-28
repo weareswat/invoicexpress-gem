@@ -19,6 +19,30 @@ RSpec.describe Invoicexpress::Request do
           Invoicexpress::BadAddress, /forget.+account_name/)
       end
     end
+
+    context 'given a client with options' do
+      let (:client) { Invoicexpress.new options }
+
+      before { stub_request :any, 'https://test.app.invoicexpress.com/' }
+
+      context 'given an account_name' do
+        let (:options) { { account_name: 'test' } }
+
+        it 'sets the correct account subdomain' do
+          subject
+          assert_requested :any, 'https://test.app.invoicexpress.com/', times: 1
+        end
+      end
+
+      context 'given an screen_name' do
+        let (:options) { { screen_name: 'test' } }
+
+        it 'sets the correct account subdomain' do
+          subject
+          assert_requested :any, 'https://test.app.invoicexpress.com/', times: 1
+        end
+      end
+    end
   end
 
   describe '.delete' do

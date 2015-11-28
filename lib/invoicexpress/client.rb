@@ -51,6 +51,6 @@ module Invoicexpress
     include Invoicexpress::Client::DebitNotes
     include Invoicexpress::Client::CreditNotes
     include Invoicexpress::Client::SimplifiedInvoices
-    
+
   end
 end
