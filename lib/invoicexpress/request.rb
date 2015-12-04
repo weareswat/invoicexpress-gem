@@ -22,8 +22,8 @@ module Invoicexpress
     end
 
     private
-    
-    # Executes the request, checking if ti was successful
+
+    # Executes the request, checking if it was successful
     #
     # @return [Boolean] True on success, false otherwise
     def boolean_from_response(method, path, options={})
@@ -34,7 +34,7 @@ module Invoicexpress
 
     def request(method, path, options={})
       token = options.delete(:api_key)  || api_key
-      url   = options.delete(:endpoint) || (api_endpoint % screen_name)
+      url   = options.delete(:endpoint) || (api_endpoint % account_domain)
       klass = options.delete(:klass) || raise(ArgumentError, "Need a HappyMapper class to parse")
 
       conn_options = {
@@ -57,7 +57,17 @@ module Invoicexpress
       end
 
       response
+    rescue Faraday::ConnectionFailed => e
+      unless e.message.match(/getaddrinfo/).nil?
+        raise Invoicexpress::BadAddress.new,
+          "Did you forget to set your account_name? Error: #{e.message}"
+      end
+
+      raise e
     end
 
+    def account_domain
+      account_name || screen_name
+    end
   end
 end

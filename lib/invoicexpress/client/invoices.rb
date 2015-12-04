@@ -3,7 +3,7 @@ require 'invoicexpress/models'
 module Invoicexpress
   class Client
     module Invoices
-      
+
       # Returns all your invoices
       #
       # @option options [Integer] page (1) You can ask a specific page of invoices
@@ -106,8 +106,6 @@ module Invoicexpress
       def invoice_email(invoice_id, message, options={})
         email_invoice(invoice_id, message, options)
       end
-
-
     end
   end
 end

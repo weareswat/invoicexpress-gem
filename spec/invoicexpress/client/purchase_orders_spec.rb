@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::PurchaseOrders do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".purchase_orders" do
@@ -20,7 +20,7 @@ describe Invoicexpress::Client::PurchaseOrders do
     it "creates a new purchase order" do
       stub_post("/purchase_orders.xml").
         to_return(xml_response("po.create.xml"))
-            
+
       object = Invoicexpress::Models::PurchaseOrder.new(
         :date => Date.new(2013, 5, 30),
         :due_date => Date.new(2013, 8, 8),
@@ -82,7 +82,7 @@ describe Invoicexpress::Client::PurchaseOrders do
       }.to raise_error(ArgumentError)
     end
   end
- 
+
 
   describe ".update_purchase_order_state" do
     it "updates the state" do
@@ -96,7 +96,7 @@ describe Invoicexpress::Client::PurchaseOrders do
       expect { item = @client.update_purchase_order_state(1430338, state) }.to_not raise_error
     end
   end
- 
+
   describe ".simplified_invoice_mail" do
     it "sends the invoice through email" do
       stub_put("/purchase_orders/1430338/email-document.xml").

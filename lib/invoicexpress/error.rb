@@ -38,7 +38,7 @@ module Invoicexpress
     private
 
     def build_error_message
-      return nil  if @response.nil?
+      return nil if @response.nil?
 
       message = if response_body
         if response_body.respond_to?(:errors)
@@ -65,4 +65,7 @@ module Invoicexpress
 
   # Raised when Invoicexpress server goes dark (500 HTTP status code)
   class InternalServerError < Error; end
+
+  # Raised when Invoicexpress server address could not be resolved
+  class BadAddress < Error; end
 end

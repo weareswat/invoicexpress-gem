@@ -3,7 +3,7 @@ require 'helper'
 describe Invoicexpress::Client::Charts do
 
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".invoicing_chart" do
@@ -29,10 +29,10 @@ describe Invoicexpress::Client::Charts do
       chart.graphs.count.should ==4
       #count values
       chart.graphs.first.values.count.should ==7
-      
+
     end
   end
-  
+
   describe ".top_clients" do
     it "Returns the top 5 clients." do
        stub_get("/api/charts/top-clients.xml").
@@ -43,7 +43,7 @@ describe Invoicexpress::Client::Charts do
        chart.clients.size.should ==1
     end
   end
-  
+
   describe ".top_debtors" do
     it "Returns the top 5 debtors." do
        stub_get("/api/charts/top-debtors.xml").
