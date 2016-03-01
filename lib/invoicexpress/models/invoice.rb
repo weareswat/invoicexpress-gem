@@ -44,7 +44,7 @@ module Invoicexpress
         base.class_eval do
           include HappyMapper
           element :id, Integer
-          element :date, Date, :on_save => DATE_FORMAT 
+          element :date, Date, :on_save => DATE_FORMAT
           element :due_date, Date, :on_save => DATE_FORMAT
           element :reference, String
           element :observations, String
@@ -76,11 +76,10 @@ module Invoicexpress
           element :before_taxes, Float
           element :taxes, Float
           element :total, Float
-          element :mb_reference, Integer
           element :permalink, String
         end
       end
-      
+
       def to_core()
         fields={:date => self.date,
           :due_date => self.due_date,
@@ -101,12 +100,12 @@ module Invoicexpress
           invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
         when "Invoicexpress::Models::DebitNote"
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
-        else        
+        else
           invoice = Invoicexpress::Models::CoreInvoice.new(fields)
         end
       end
     end
-    
+
     # Note: we need all of these models because the API crashes when we send an object with the fields from the get request.
     # example: do a get and then a update.
     class CoreSimplifiedInvoice < BaseModel
@@ -139,7 +138,7 @@ module Invoicexpress
       include ExtraInvoice
       tag 'simplified_invoice'
     end
-    
+
     class Invoice < BaseModel
       include BaseInvoice
       include ExtraInvoice
