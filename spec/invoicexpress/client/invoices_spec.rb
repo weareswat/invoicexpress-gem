@@ -43,6 +43,46 @@ describe Invoicexpress::Client::Invoices do
       item.id.should        == 1503698
       item.status           == "draft"
     end
+
+    context 'given an invoice with mb_reference set to true' do
+      let (:invoice) do
+        Invoicexpress::Models::Invoice.new(
+          :date => Date.new(2013, 6, 18),
+          :due_date => Date.new(2013, 6, 18),
+          :tax_exemption => "M01",
+          :mb_reference => true,
+          :client => Invoicexpress::Models::Client.new(
+            :name => "Ruben Fonseca"
+          ),
+          :items => [
+            Invoicexpress::Models::Item.new(
+              :name => "Item 1",
+              :unit_price => 30,
+              :quantity => 1,
+              :unit => "unit",
+            )
+          ]
+        )
+      end
+
+      before do
+        stub_post("/invoices.xml").
+          to_return(xml_response("invoices.create.xml"))
+      end
+
+      it 'creates a draft invoice' do
+        item = @client.create_invoice(invoice)
+        item.id.should        == 1503698
+        item.status           == "draft"
+      end
+
+      it 'sends mb_reference only once in the payload' do
+        @client.create_invoice(invoice)
+        expect(a_request(:post, /.+invoices.xml$/).with do |req|
+          req.body.scan(/<mb_reference>true<\/mb_reference>/).length == 1
+        end).to have_been_made.once
+      end
+    end
   end
 
   describe ".invoice" do
