@@ -1,4 +1,7 @@
-#Version 0.1.8
+# Version 0.1.9
+Fixed problem with duplicated mb_reference
+
+# Version 0.1.8
 Added city field to client.
 
 # Version 0.1.7
