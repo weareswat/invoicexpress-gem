@@ -134,7 +134,7 @@ module Invoicexpress
       def simplified_invoice_pdf_url(simplified_invoice_id, options={})
         params = { :klass => Invoicexpress::Models::SimplifiedInvoice }
 
-        get("pdf/#{simplified_invoice_id}.xml", params.merge(options))
+        get("api/pdf/#{simplified_invoice_id}.xml", params.merge(options))
       end
     end
   end
