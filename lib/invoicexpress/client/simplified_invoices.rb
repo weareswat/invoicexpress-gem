@@ -3,7 +3,7 @@ require 'invoicexpress/models'
 module Invoicexpress
   class Client
     module SimplifiedInvoices
-      
+
       # Returns all your simplified invoices
       #
       # @option options [Integer] page (1) You can ask a specific page of simplified invoices
@@ -125,6 +125,17 @@ module Invoicexpress
         put("simplified_invoices/#{simplified_invoice_id}/email-document.xml", params.merge(options))
       end
 
+      # Generates the invoice pdf url
+      #
+      # @param simplified_invoice_id [String] The simplified invoice id to get pdf url
+      # @raise Invoicexpress::Unauthorized When the client is unauthorized
+      # @raise Invoicexpress::UnprocessableEntity When there are errors on the submission
+      # @raise Invoicexpress::NotFound When the simplified invoice doesn't exist
+      def simplified_invoice_pdf_url(simplified_invoice_id, options={})
+        params = { :klass => Invoicexpress::Models::SimplifiedInvoice }
+
+        get("api/pdf/#{simplified_invoice_id}.xml", params.merge(options))
+      end
     end
   end
 end
