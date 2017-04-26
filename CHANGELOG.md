@@ -1,3 +1,6 @@
+# Version 0.2.0
+Support for 429 RateLimitExceeded code
+
 # Version 0.1.9
 Added Invoice Receipt
 
