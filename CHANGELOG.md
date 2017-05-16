@@ -1,3 +1,14 @@
+# Version 0.2.5
+Big changes on this version:
+- updated send email endpoint for invoices
+- cleanup gemspec file
+- started cleaning up test files from should to expect
+- added manual_sequence_number field to invoices. Required for non portuguese accounts with manual sequence numbering.
+- added saft_hash field to invoices
+- added currency, multicurrency to invoices. not supported officially.
+- added owner_invoice_id to credit_note. not working.
+
+
 # Version 0.2.0
 Support for 429 RateLimitExceeded code
 

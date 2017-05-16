@@ -11,8 +11,9 @@ describe Invoicexpress::Client::Invoices do
         to_return(xml_response("invoices.list.xml"))
 
       items = @client.invoices
-      items.invoices.count.should == 10
-      items.current_page==1
+
+      expect(items.invoices.count).to eq 10
+      expect(items.current_page).to eq 1
     end
   end
 
@@ -21,7 +22,7 @@ describe Invoicexpress::Client::Invoices do
       stub_post("/invoices.xml").
         to_return(xml_response("invoices.create.xml"))
 
-      
+
       object = Invoicexpress::Models::Invoice.new(
         :date => Date.new(2013, 6, 18),
         :due_date => Date.new(2013, 6, 18),
@@ -40,9 +41,49 @@ describe Invoicexpress::Client::Invoices do
       )
 
       item = @client.create_invoice(object)
-      item.id.should        == 1503698
-      item.status           == "draft"
+
+      expect(item.id).to eq 1503698
+      expect(item.status).to eq "draft"
     end
+
+    it "creates a new invoice with currency" do
+      stub_post("/invoices.xml").
+        to_return(xml_response("invoices.create_usd.xml"))
+
+        object = Invoicexpress::Models::Invoice.new(
+          :date => Date.new(2017, 5, 16),
+          :due_date => Date.new(2017, 5, 16),
+          :tax_exemption => "M08",
+          :status=> "draft",
+          :client => Invoicexpress::Models::Client.new(
+            :name => "Peter Parker"
+          ),
+          :currency_code=> "USD_$",
+          :rate => 1.09,
+          :items => [
+            Invoicexpress::Models::Item.new(
+              :name => "Poster 1",
+              :unit_price => 30,
+              :quantity => 1,
+              :unit => "unit",
+            ),
+            Invoicexpress::Models::Item.new(
+              :name => "Poster 2",
+              :unit_price => 10,
+              :quantity => 1,
+              :unit => "unit",
+            )
+          ]
+        )
+
+      item = @client.create_invoice(object)
+
+      expect(item.id).to eq 12530575
+      expect(item.multicurrency.rate).to eq 1.09
+      expect(item.multicurrency.currency).to eq "USD"
+      expect(item.multicurrency.total).to eq 43.6
+    end
+
   end
 
   describe ".invoice" do
@@ -51,8 +92,10 @@ describe Invoicexpress::Client::Invoices do
         to_return(xml_response("invoices.get.xml"))
 
       item = @client.invoice(1503698)
-      item.status.should == "draft"
-      item.client.id.should == 501854
+
+      expect(item.status).to eq "draft"
+      expect(item.client.id).to eq 501854
+      expect(item.before_taxes).to eq 30.0
     end
   end
 
@@ -79,7 +122,7 @@ describe Invoicexpress::Client::Invoices do
       }.to raise_error(ArgumentError)
     end
   end
- 
+
   describe ".update_invoice_state" do
     it "updates the state" do
       stub_put("/invoices/1503698/change-state.xml").
@@ -91,10 +134,10 @@ describe Invoicexpress::Client::Invoices do
       expect { @client.update_invoice_state(1503698, state) }.to_not raise_error
     end
   end
- 
+
   describe ".email_invoice" do
     it "sends the invoice through email" do
-      stub_put("/invoice/1503698/email-invoice.xml").
+      stub_put("/invoices/1503698/email-document.xml").
         to_return(xml_response("ok.xml"))
       message = Invoicexpress::Models::Message.new(
         :subject => "Hello world",

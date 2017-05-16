@@ -3,7 +3,7 @@ require 'invoicexpress/models'
 module Invoicexpress
   class Client
     module Invoices
-      
+
       # Returns all your invoices
       #
       # @option options [Integer] page (1) You can ask a specific page of invoices
@@ -99,7 +99,7 @@ module Invoicexpress
         raise(ArgumentError, "message has the wrong type") unless message.is_a?(Invoicexpress::Models::Message)
 
         params = { :body => message, :klass => Invoicexpress::Models::Invoice }
-        put("invoice/#{invoice_id}/email-invoice.xml", params.merge(options))
+        put("invoices/#{invoice_id}/email-document.xml", params.merge(options))
       end
 
       #deprecated

@@ -12,8 +12,9 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.invoicing.xml"))
 
       chart = @client.invoicing_chart
-      chart.series.values.count.should == 6
-      chart.graphs.first.values.count.should == 6
+
+      expect(chart.series.values.count).to eq 6
+      expect(chart.graphs.first.values.count).to eq 6
     end
   end
 
@@ -23,35 +24,34 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.treasury.xml"))
 
       chart = @client.treasury_chart
-      #all there
-      chart.series.values.count.should == 7
-      #4 graphs
-      chart.graphs.count.should ==4
-      #count values
-      chart.graphs.first.values.count.should ==7
-      
+
+      expect(chart.series.values.count).to eq 7
+      expect(chart.graphs.count).to eq 4
+      expect(chart.graphs.first.values.count).to eq 7
+
     end
   end
-  
+
   describe ".top_clients" do
     it "Returns the top 5 clients." do
        stub_get("/api/charts/top-clients.xml").
          to_return(xml_response("charts.top-clients.xml"))
 
        chart = @client.top_clients
-       chart.clients.first.name.should =="Ruben Fonseca"
-       chart.clients.size.should ==1
+
+       expect(chart.clients.first.name).to eq "Ruben Fonseca"
+       expect(chart.clients.size).to eq 1
     end
   end
-  
+
   describe ".top_debtors" do
     it "Returns the top 5 debtors." do
        stub_get("/api/charts/top-debtors.xml").
          to_return(xml_response("charts.top-debtors.xml"))
 
        chart = @client.top_debtors
-       chart.clients.size.should ==1
-       chart.clients.first.name.should =="Ruben Fonseca"
+       expect(chart.clients.size).to eq 1
+       expect(chart.clients.first.name).to eq "Ruben Fonseca"
     end
   end
 
@@ -61,9 +61,10 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.quarterly-results.xml"))
 
       list = @client.quarterly_results(2010)
-      list.quarter01.invoicing.should ==60.0
-      list.year.should ==2010
+      expect(list.quarter01.invoicing).to eq 60.0
+      expect(list.year).to eq 2010
+
    end
   end
-   
+
 end

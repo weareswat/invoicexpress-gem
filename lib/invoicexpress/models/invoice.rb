@@ -1,42 +1,11 @@
 require 'invoicexpress/models/client'
+require 'invoicexpress/models/tax'
+require 'invoicexpress/models/item'
+require 'invoicexpress/models/multicurrency'
 
 module Invoicexpress
   module Models
 
-    class Tax < BaseModel
-      include HappyMapper
-
-      tag 'tax'
-      element :id, Integer
-      element :name, String
-      element :value, Float
-      element :region, String
-      element :default_tax, Integer
-    end
-
-    class Item < BaseModel
-      include HappyMapper
-
-      tag 'item'
-      element :id, Integer
-      element :name, String
-      element :description, String
-      element :unit_price, Float
-      element :quantity, Float
-      element :unit, String
-      has_one :tax, Tax
-      element :discount, Float
-    end
-
-    class Items < BaseModel
-      include HappyMapper
-
-      tag 'items'
-      attribute :type, String, :on_save => Proc.new { |value|
-        "array"
-      }
-      has_many :items, Item
-    end
 
     # Fields common to all invoice models, necessary for create/update
     module BaseInvoice
@@ -44,22 +13,34 @@ module Invoicexpress
         base.class_eval do
           include HappyMapper
           element :id, Integer
-          element :date, Date, :on_save => DATE_FORMAT 
+          element :date, Date, :on_save => DATE_FORMAT
           element :due_date, Date, :on_save => DATE_FORMAT
           element :reference, String
           element :observations, String
           element :retention, Float
           element :tax_exemption, String
           element :sequence_id, Integer
-          element :mb_reference, String
+          element :manual_sequence_number, String
 
+          element :mb_reference, String
+          # currency codes
           element :rate, String
           element :currency_code, String
-
+          element :owner_invoice_id, String
           has_one :client, Client
           has_many :items, Item, :on_save => Proc.new { |value|
             Items.new(:items => value)
           }
+        end
+      end
+    end
+
+    # Extra fields for creating credit notes
+    module BaseCreditNote
+      def self.included(base)
+        base.class_eval do
+          #The (owner) invoice associated to this credit-note.
+          element :owner_invoice_id, String
         end
       end
     end
@@ -69,7 +50,9 @@ module Invoicexpress
       def self.included(base)
         base.class_eval do
           element :status, String
+          element :archived, String
           element :sequence_number, String
+          element :inverted_sequence_number, String
           element :currency, String
           element :sum, Float
           element :discount, Float
@@ -78,11 +61,14 @@ module Invoicexpress
           element :total, Float
           element :mb_reference, Integer
           element :permalink, String
+          element :saft_hash, String
+          has_one :multicurrency, Multicurrency
         end
       end
-      
+
       def to_core()
-        fields={:date => self.date,
+        fields={
+          :date => self.date,
           :due_date => self.due_date,
           :reference=> self.reference,
           :observations=> self.observations,
@@ -91,22 +77,24 @@ module Invoicexpress
           :sequence_id=> self.sequence_id,
           :client => self.client,
           :items => self.items,
-          :mb_reference=> self.mb_reference}
+          :mb_reference=> self.mb_reference
+        }
         case self.class.to_s
         when "Invoicexpress::Models::SimplifiedInvoice"
           invoice = Invoicexpress::Models::CoreSimplifiedInvoice.new(fields)
         when "Invoicexpress::Models::CashInvoice"
           invoice = Invoicexpress::Models::CoreCashInvoice.new(fields)
         when "Invoicexpress::Models::CreditNote"
+          #fields.merge! owner_invoice_id: self.owner_invoice_id
           invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
         when "Invoicexpress::Models::DebitNote"
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
-        else        
+        else
           invoice = Invoicexpress::Models::CoreInvoice.new(fields)
         end
       end
     end
-    
+
     # Note: we need all of these models because the API crashes when we send an object with the fields from the get request.
     # example: do a get and then a update.
     class CoreSimplifiedInvoice < BaseModel
@@ -126,11 +114,13 @@ module Invoicexpress
 
     class CoreCreditNote < BaseModel
       include BaseInvoice
+      include BaseCreditNote
       tag 'credit_note'
     end
 
     class CoreDebitNote < BaseModel
       include BaseInvoice
+      include BaseCreditNote
       tag 'debit_note'
     end
 
@@ -152,7 +142,7 @@ module Invoicexpress
       include ExtraInvoice
       tag 'simplified_invoice'
     end
-    
+
     class Invoice < BaseModel
       include BaseInvoice
       include ExtraInvoice
@@ -167,12 +157,14 @@ module Invoicexpress
 
     class CreditNote < BaseModel
       include BaseInvoice
+      include BaseCreditNote
       include ExtraInvoice
       tag 'credit_note'
     end
 
     class DebitNote < BaseModel
       include BaseInvoice
+      include BaseCreditNote
       include ExtraInvoice
       tag 'debit_note'
     end
@@ -196,7 +188,7 @@ module Invoicexpress
       element :total_entries, Integer
       element :per_page, Integer
     end
-    
+
     #added for app.invoicexpress api version
     class InvoiceReceipts < BaseModel
       include HappyMapper
@@ -259,4 +251,3 @@ module Invoicexpress
 
   end
 end
-

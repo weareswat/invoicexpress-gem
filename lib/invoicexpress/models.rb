@@ -3,7 +3,7 @@ require 'happymapper'
 module Invoicexpress
   module Models
     DATE_FORMAT = Proc.new { |value| value.strftime("%d/%m/%Y") unless value.nil? }
-    
+
     class BaseModel
       def initialize(attributes = {})
         super()
