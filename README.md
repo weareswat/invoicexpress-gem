@@ -20,7 +20,7 @@ Run bundle, the project should need:
 * Client        - 100%
 * Sequences     - 100%
 * Users         - 100%
-* Invoices      - 100%
+* Invoices      - 80%
 * Cash Invoices - 100%
 * Items         - 100%
 * Charts        - 100%
@@ -50,16 +50,31 @@ Run bundle, the project should need:
 
 We've included docs for all methods. Refer to the doc folder and client section.
 
+## Testing locally
+
+Run the tests from spec/ with
+
+  rspec spec/
+
+
+## Developing the gem further
+
+Run the rake task
+
+    rake console
+
+to launch IRB with the gem loaded and you can use the following examples from the next section. If you want to use a proxy to inspect the requests you can use Postman, ex: http://blog.getpostman.com/2016/06/26/using-postman-proxy-to-capture-and-inspect-api-calls-from-ios-or-android-devices/
+
 ## Examples
 
 If using from inside a rails project use:
 
     require 'invoicexpress'
- 
+
     client = Invoicexpress::Client.new(
-      :screen_name => "yourusername",
-      :api_key     => "yourapikey"
+      screen_name: "yourusername",
+      api_key:     "yourapikey",
+      proxy: "192.168.1.201:5555"
     )
 
 Examples for API are located in the EXAMPLES.md file.
-
