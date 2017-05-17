@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transport>
+    <id>12531848</id>
+    <status>draft</status>
+    <archived>false</archived>
+    <type>Transport</type>
+    <sequence_number>rascunho</sequence_number>
+    <date>16/05/2017</date>
+    <due_date></due_date>
+    <reference></reference>
+    <observations>IVA &#8211; autoliquida&#231;&#227;o.</observations>
+    <retention></retention>
+    <permalink>https://www.app.invoicexpress.com/documents/12531848dbbcbc342d3f0296f02f1395a9b3b5f8466eef16</permalink>
+    <address_from>
+        <detail>Morada de envio</detail>
+        <city>Porto</city>
+        <postal_code>1111-501</postal_code>
+        <country>Portugal</country>
+    </address_from>
+    <address_to>
+        <detail>Morada de entrega</detail>
+        <city>Lisboa</city>
+        <postal_code>1111-501</postal_code>
+        <country>Portugal</country>
+    </address_to>
+    <client>
+        <id>1408722</id>
+        <name>Peter Parker</name>
+        <code>5239</code>
+        <email>help@thinkorange.pt</email>
+        <address>Uma morada</address>
+        <city>Lisboa</city>
+        <postal_code>1111-111</postal_code>
+        <country>Portugal</country>
+        <fiscal_id>177142430</fiscal_id>
+        <website>http://www.cenas.pt</website>
+        <phone></phone>
+        <fax></fax>
+    </client>
+    <currency>Euro</currency>
+    <multicurrency>
+        <rate>1.1014</rate>
+        <currency>USD</currency>
+        <total>38.55</total>
+    </multicurrency>
+    <items type="array">
+        <item>
+            <name>DEV</name>
+            <description>IX Website</description>
+            <unit_price>35.0</unit_price>
+            <unit></unit>
+            <quantity>1.0</quantity>
+            <tax>
+                <id>92081</id>
+                <name>Isento</name>
+                <value>0.0</value>
+            </tax>
+            <discount>0.0</discount>
+            <subtotal>35.0</subtotal>
+            <tax_amount>0.0</tax_amount>
+            <discount_amount>0.0</discount_amount>
+            <total>35.0</total>
+        </item>
+    </items>
+    <sum>35.0</sum>
+    <discount>0.0</discount>
+    <before_taxes>35.0</before_taxes>
+    <taxes>0.0</taxes>
+    <total>35.0</total>
+    <invoice_timeline type="array">
+        <event>
+            <type>create</type>
+            <date>16/05/2017</date>
+            <time>17:41</time>
+            <user>cenas@mail.com</user>
+        </event>
+        <event>
+            <type>send_email</type>
+            <date>17/05/2017</date>
+            <time>11:07</time>
+            <user>cenas@mail.com</user>
+        </event>
+        <event>
+            <type>send_email</type>
+            <date>17/05/2017</date>
+            <time>11:09</time>
+            <user>cenas@mail.com</user>
+        </event>
+        <event>
+            <type>send_email</type>
+            <date>17/05/2017</date>
+            <time>11:10</time>
+            <user>cenas@mail.com</user>
+        </event>
+    </invoice_timeline>
+</transport>

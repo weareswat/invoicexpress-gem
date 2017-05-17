@@ -12,13 +12,15 @@ describe Invoicexpress::Client do
 
     it "defaults to https://%s.app.invoicexpress.com/" do
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://%s.app.invoicexpress.com/"
+
+      expect(client.api_endpoint).to eq "https://%s.app.invoicexpress.com/"
     end
 
     it "is set" do
       Invoicexpress.api_endpoint = "https://thinkorangeteste.app.invoicexpress.com/"
       client = Invoicexpress::Client.new
-      client.api_endpoint.should == "https://thinkorangeteste.app.invoicexpress.com/"
+
+      expect(client.api_endpoint).to eq "https://thinkorangeteste.app.invoicexpress.com/"
     end
   end
 end

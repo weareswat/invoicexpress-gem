@@ -34,7 +34,7 @@ module Invoicexpress
       end
     end
 
-    # Extra fields for creating credit notes
+    # Extra fields for creating credit notes and debit notes
     module BaseCreditNote
       def self.included(base)
         base.class_eval do
@@ -74,8 +74,11 @@ module Invoicexpress
           :retention=> self.retention,
           :tax_exemption => self.tax_exemption,
           :sequence_id=> self.sequence_id,
+          :manual_sequence_number=> self.manual_sequence_number,
           :client => self.client,
           :items => self.items,
+          :currency_code=> self.currency_code,
+          :rate=> self.rate,
           :mb_reference=> self.mb_reference
         }
         case self.class.to_s
@@ -84,8 +87,10 @@ module Invoicexpress
         when "Invoicexpress::Models::CashInvoice"
           invoice = Invoicexpress::Models::CoreCashInvoice.new(fields)
         when "Invoicexpress::Models::CreditNote"
+          fields.merge! owner_invoice_id: self.owner_invoice_id 
           invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
         when "Invoicexpress::Models::DebitNote"
+          fields.merge! owner_invoice_id: self.owner_invoice_id
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
         else
           invoice = Invoicexpress::Models::CoreInvoice.new(fields)
@@ -228,24 +233,7 @@ module Invoicexpress
       element :message, String
     end
 
-    class MessageClient < BaseModel
-      include HappyMapper
 
-      tag 'client'
-      element :email, String
-      element :save, Integer
-    end
-
-    class Message < BaseModel
-      include HappyMapper
-
-      tag 'message'
-      has_one :client, MessageClient
-      element :cc, String
-      element :bcc, String
-      element :subject, String
-      element :body, String
-    end
 
   end
 end

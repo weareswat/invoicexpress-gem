@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+  <client>
+    <name>Peter Parker</name>
+    <email>psousa@thinkorange.pt</email>
+  </client>
+  <subject>Hello world</subject>
+  <body>Here is cenas.</body>
+  <logo>1</logo>
+</message>

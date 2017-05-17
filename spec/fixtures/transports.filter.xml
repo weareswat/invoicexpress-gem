@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transports type="array">
+    <transport>
+        <id>12531848</id>
+        <status>draft</status>
+        <archived>false</archived>
+        <type>Transport</type>
+        <sequence_number></sequence_number>
+        <inverted_sequence_number>rascunho</inverted_sequence_number>
+        <date>16/05/2017</date>
+        <reference></reference>
+        <observations>IVA &#8211; autoliquida&#231;&#227;o.</observations>
+        <retention></retention>
+        <permalink>https://www.app.invoicexpress.com/documents/12531848dbbcbc342d3f0296f02f1395a9b3b5f8466eef16</permalink>
+        <client>
+            <id>1408722</id>
+            <name>Peter Parker</name>
+            <code>5239</code>
+            <email>help@thinkorange.pt</email>
+            <address>Some address here</address>
+            <postal_code>1111-501</postal_code>
+            <country>Portugal</country>
+            <fiscal_id>177142430</fiscal_id>
+            <website></website>
+            <phone></phone>
+            <fax></fax>
+        </client>
+        <currency>Euro</currency>
+        <multicurrency>
+            <rate>1.1014</rate>
+            <currency>USD</currency>
+            <total>38.55</total>
+        </multicurrency>
+        <items type="array">
+            <item>
+                <name>DEV</name>
+                <description>RVD Website</description>
+                <unit_price>35.0</unit_price>
+                <unit></unit>
+                <quantity>1.0</quantity>
+                <tax>
+                    <name>Isento</name>
+                    <value>0.0</value>
+                </tax>
+                <discount>0.0</discount>
+                <subtotal>35.0</subtotal>
+                <tax_amount>0.0</tax_amount>
+                <discount_amount>0.0</discount_amount>
+                <total>35.0</total>
+            </item>
+        </items>
+        <sum>35.0</sum>
+        <discount>0.0</discount>
+        <before_taxes>35.0</before_taxes>
+        <taxes>0.0</taxes>
+        <total>35.0</total>
+    </transport>
+    <current_page>1</current_page>
+    <total_pages>1</total_pages>
+    <total_entries>1</total_entries>
+    <per_page>30</per_page>
+</transports>
