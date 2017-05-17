@@ -26,7 +26,6 @@ module Invoicexpress
           # currency codes
           element :rate, String
           element :currency_code, String
-          element :owner_invoice_id, String
           has_one :client, Client
           has_many :items, Item, :on_save => Proc.new { |value|
             Items.new(:items => value)
@@ -85,7 +84,6 @@ module Invoicexpress
         when "Invoicexpress::Models::CashInvoice"
           invoice = Invoicexpress::Models::CoreCashInvoice.new(fields)
         when "Invoicexpress::Models::CreditNote"
-          #fields.merge! owner_invoice_id: self.owner_invoice_id
           invoice = Invoicexpress::Models::CoreCreditNote.new(fields)
         when "Invoicexpress::Models::DebitNote"
           invoice = Invoicexpress::Models::CoreDebitNote.new(fields)
