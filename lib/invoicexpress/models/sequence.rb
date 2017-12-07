@@ -15,7 +15,6 @@ module Invoicexpress
       element :current_simplified_invoice_sequence_id, Integer
       element :current_simplified_invoice_number, Integer
       element :current_debit_note_sequence_id, Integer
-      element :current_debit_note_number, Integer
       element :current_receipt_sequence_id, Integer
       element :current_receipt_number, Integer
       element :current_shipping_sequence_id, Integer
