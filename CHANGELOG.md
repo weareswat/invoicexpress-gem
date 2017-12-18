@@ -1,3 +1,6 @@
+# Version 0.3.1
+Added missing city field to client/customer model.
+
 # Version 0.3.0
 More big changes on this version:
 - added logo option to send email
