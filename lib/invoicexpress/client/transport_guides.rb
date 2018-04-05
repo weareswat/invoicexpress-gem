@@ -15,7 +15,7 @@ module Invoicexpress
       # @return [Invoicexpress::Models::TransportGuides] A struct with results (pagination) and all the transport guides
       # @raise Invoicexpress::Unauthorized When the client is unauthorized
       def transport_guides(options={})
-         params = { :page => 1, 'type[]' => ['Transport'], 'status[]' => ["draft", "sent", "canceled", "second_copy"], "non_archived": "true", klass: Invoicexpress::Models::TransportGuides }
+         params = { :page => 1, 'type[]' => ['Transport'], 'status[]' => ["draft", "sent", "canceled", "second_copy"], "non_archived"=> "true", :klass=>Invoicexpress::Models::TransportGuides }
 
         get("transports.xml", params.merge(options))
       end
