@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::Taxes do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".taxes" do

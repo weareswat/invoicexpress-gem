@@ -1,4 +1,4 @@
-# invoiceXpress GEM Examples
+# InvoiceXpress GEM Examples
 
 Here's some examples for the most common objects and endpoints. You could also take a look at the spec folder for extensive tests.
 

@@ -3,7 +3,7 @@ require 'helper'
 describe Invoicexpress::Client::Clients do
 
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".login" do
@@ -27,12 +27,12 @@ describe Invoicexpress::Client::Clients do
       list.first.name.should == "thinkorangeteste"
     end
   end
-  
+
   describe ".change-account" do
     it "changes the current account to the account id submitted" do
       stub_put("/users/change-account.xml").
         to_return(xml_response("users.change-account.xml"))
-        
+
       expect { cnote = @client.change_account(13233) }.to_not raise_error
     end
   end

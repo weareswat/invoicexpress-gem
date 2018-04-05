@@ -106,8 +106,6 @@ module Invoicexpress
       def invoice_email(invoice_id, message, options={})
         email_invoice(invoice_id, message, options)
       end
-
-
     end
   end
 end

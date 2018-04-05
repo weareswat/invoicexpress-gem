@@ -58,7 +58,6 @@ module Invoicexpress
           element :before_taxes, Float
           element :taxes, Float
           element :total, Float
-          element :mb_reference, Integer
           element :permalink, String
           element :saft_hash, String
           has_one :multicurrency, Multicurrency
@@ -163,6 +162,8 @@ module Invoicexpress
       include BaseCreditNote
       include ExtraInvoice
       tag 'credit_note'
+
+      element :owner_invoice_id, Integer
     end
 
     class DebitNote < BaseModel
@@ -170,6 +171,8 @@ module Invoicexpress
       include BaseCreditNote
       include ExtraInvoice
       tag 'debit_note'
+
+      element :owner_invoice_id, Integer
     end
 
     class InvoiceResult

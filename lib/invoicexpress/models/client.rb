@@ -20,6 +20,7 @@ module Invoicexpress
       element :balance, Float
       element :country, String
       element :language, String
+      element :city, String
     end
 
   end

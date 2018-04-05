@@ -38,7 +38,7 @@ module Invoicexpress
     private
 
     def build_error_message
-      return nil  if @response.nil?
+      return nil if @response.nil?
 
       message = if response_body
         if response_body.respond_to?(:errors)
@@ -69,4 +69,7 @@ module Invoicexpress
   # Raised when InvoiceXpress returns a 429 HTTP status code
   class RateLimitExceeded < Error; end
 
+  # Raised when Invoicexpress server address could not be resolved
+  class BadAddress < Error; end
+  
 end

@@ -3,7 +3,7 @@ require 'helper'
 describe Invoicexpress::Client::Charts do
 
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".invoicing_chart" do
@@ -24,11 +24,12 @@ describe Invoicexpress::Client::Charts do
         to_return(xml_response("charts.treasury.xml"))
 
       chart = @client.treasury_chart
-
+      #all there
       expect(chart.series.values.count).to eq 7
+      #4 graphs
       expect(chart.graphs.count).to eq 4
+      #count values
       expect(chart.graphs.first.values.count).to eq 7
-
     end
   end
 
