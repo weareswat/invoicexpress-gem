@@ -1,5 +1,5 @@
-# Version 0.3.1
-Added missing city field to client/customer model.
+# Version 0.3.1.1
+Merged changes from other contributors. Bumped version.
 
 # Version 0.3.0
 More big changes on this version:
@@ -22,12 +22,14 @@ Big changes on this version:
 
 # Version 0.2.0
 Support for 429 RateLimitExceeded code
-
-# Version 0.1.9
 Added Invoice Receipt
+Added supplier model
+
+# Version 0.1.9.1
+Fixed problem with duplicated mb_reference
 
 # Version 0.1.8
-Added supplier model
+Added city field to client.
 
 # Version 0.1.7
 Fix issue #7 - Wrong return type of Modes::Item#tax

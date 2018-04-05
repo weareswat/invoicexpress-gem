@@ -2,7 +2,7 @@ require 'helper'
 
 describe Invoicexpress::Client::CreditNotes do
   before do
-    @client = Invoicexpress::Client.new(:screen_name => "thinkorangeteste")
+    @client = Invoicexpress::Client.new(:account_name => "thinkorangeteste")
   end
 
   describe ".credit_notes" do

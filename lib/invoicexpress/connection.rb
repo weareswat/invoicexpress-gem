@@ -35,6 +35,5 @@ module Invoicexpress
       connection.headers[:user_agent] = user_agent
       connection
     end
-
   end
 end
