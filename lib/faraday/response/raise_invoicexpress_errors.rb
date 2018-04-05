@@ -6,6 +6,7 @@ module Faraday
     ERROR_MAP = {
       401 => Invoicexpress::Unauthorized,
       422 => Invoicexpress::UnprocessableEntity,
+      429 => Invoicexpress::RateLimitExceeded,
       500 => Invoicexpress::InternalServerError,
     }
 

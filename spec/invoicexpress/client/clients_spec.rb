@@ -80,6 +80,7 @@ describe Invoicexpress::Client::Clients do
       c = @client.client(1)
       c.name.should == "Bruce Norris"
       c.code.should == 1337
+      c.city.should == "Lisboa"
     end
   end
 

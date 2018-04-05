@@ -1,3 +1,33 @@
+# Version 0.3.2
+Added current_invoice_receipt_number and  current_invoice_receipt_sequence_id to sequences.      
+
+# Version 0.3.1.1
+Merged changes from other contributors. Bumped version.
+
+# Version 0.3.0
+More big changes on this version:
+- added logo option to send email
+- added transport guides client
+- set params_encoder = Faraday::FlatParamsEncoder in GET requests. We need this for the way that IX accepts arrays in GET requests. See https://github.com/lostisland/faraday/issues/78
+- fixed missing owner_invoice_id, manual_sequence_number, currency_code, rate params on update credit note and debit note
+- added models for address, message, transport guide
+- added tests for transport guides
+
+# Version 0.2.5
+Big changes on this version:
+- updated send email endpoint for invoices
+- cleanup gemspec file
+- started cleaning up test files from should to expect
+- added manual_sequence_number field to invoices. Required for non portuguese accounts with manual sequence numbering.
+- added saft_hash field to invoices
+- added currency, multicurrency to invoices. not supported officially.
+- added owner_invoice_id to credit_note. not working.
+
+# Version 0.2.0
+Support for 429 RateLimitExceeded code
+Added Invoice Receipt
+Added supplier model
+
 # Version 0.1.9.1
 Fixed problem with duplicated mb_reference
 

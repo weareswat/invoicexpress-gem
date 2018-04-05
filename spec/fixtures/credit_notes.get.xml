@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<credit_note>
+    <id>12116089</id>
+    <status>settled</status>
+    <archived>false</archived>
+    <type>CreditNote</type>
+    <sequence_number>438/SKETCH</sequence_number>
+    <inverted_sequence_number>SKETCH/438</inverted_sequence_number>
+    <date>05/04/2017</date>
+    <due_date>05/04/2017</due_date>
+    <reference>0EJ75472FA730954U</reference>
+    <observations>IVA &#8211; autoliquida&#231;&#227;o. Artigo 6.&#186; do CIVA - M08  </observations>
+    <retention></retention>
+    <permalink>https://www.app.invoicexpress.com/documents/xxx</permalink>
+    <saft_hash>huQb</saft_hash>
+    <client>
+        <id>1607239</id>
+        <name>DUDE</name>
+        <code>SKETCH-4060</code>
+        <email>xxx@morsy.de</email>
+        <address>xxx</address>
+        <postal_code>D&#252;sseldorf</postal_code>
+        <country>Germany</country>
+        <fiscal_id>xxx</fiscal_id>
+        <observations>xxx</observations>
+    </client>
+    <currency>Euro</currency>
+    <multicurrency>
+        <rate>1.0804</rate>
+        <currency>USD</currency>
+        <total>7.99</total>
+    </multicurrency>
+    <items type="array">
+        <item>
+            <name>SketchCasts 2017</name>
+            <description>SketchCasts Monthly Subscription</description>
+            <unit_price>7.4048</unit_price>
+            <unit></unit>
+            <quantity>1.0</quantity>
+            <tax>
+                <id>95333</id>
+                <name>EXEMPT</name>
+                <value>0.0</value>
+            </tax>
+            <discount>0.0</discount>
+            <subtotal>7.4048</subtotal>
+            <tax_amount>0.0</tax_amount>
+            <discount_amount>0.0</discount_amount>
+            <total>7.4048</total>
+        </item>
+    </items>
+    <sum>7.4</sum>
+    <discount>0.0</discount>
+    <before_taxes>7.4</before_taxes>
+    <taxes>0.0</taxes>
+    <total>7.4</total>
+    <invoice_timeline type="array">
+        <event>
+            <type>create</type>
+            <date>05/04/2017</date>
+            <time>16:17</time>
+            <user>business@thinkorange.pt</user>
+        </event>
+        <event>
+            <type>edited</type>
+            <date>05/04/2017</date>
+            <time>16:18</time>
+            <user>business@thinkorange.pt</user>
+        </event>
+        <event>
+            <type>edited</type>
+            <date>05/04/2017</date>
+            <time>16:18</time>
+            <user>business@thinkorange.pt</user>
+        </event>
+    </invoice_timeline>
+</credit_note>

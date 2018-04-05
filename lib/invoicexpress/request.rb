@@ -47,6 +47,7 @@ module Invoicexpress
 
         case method
         when :get, :delete, :head
+          request.options.params_encoder = Faraday::FlatParamsEncoder
           request.url(path, options)
         when :patch, :post, :put
           request.headers['Content-Type'] = "application/xml; charset=utf-8"

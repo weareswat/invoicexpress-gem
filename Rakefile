@@ -17,3 +17,7 @@ namespace :doc do
     ]
   end
 end
+
+task :console do
+  exec "irb -r invoicexpress -I ./lib"
+end

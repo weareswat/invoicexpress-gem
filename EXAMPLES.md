@@ -2,6 +2,46 @@
 
 Here's some examples for the most common objects and endpoints. You could also take a look at the spec folder for extensive tests.
 
+
+### Invoice Receipts
+
+invoices = @client.invoice_receipts
+puts invoices
+
+invoice = Invoicexpress::Models::InvoiceReceipt.new(
+  :date => Date.new(2015, 5, 8),
+  :due_date => Date.new(2015, 6, 16),
+  :tax_exemption => "M01",
+  :client => Invoicexpress::Models::Client.new(
+    :name => "Pedro Sousa",
+    :email=> 'psousa@thinkorange.pt'
+  ),
+  :items => [
+    Invoicexpress::Models::Item.new(
+      :name => "Playstation 4",
+      :unit_price => 399,
+      :quantity => 2,
+      :unit => "unit",
+    ),
+    Invoicexpress::Models::Item.new(
+      :name => "Oculus Rift",
+      :unit_price => 350,
+      :quantity => 1,
+      :unit => "unit",
+    )
+  ]
+)
+
+invoice_1 = @client.create_invoice_receipt(invoice)
+invoice_2 = @client.invoice_receipt(5827534)
+invoice_2.tax_exemption="M01"
+@client.update_invoice_receipt(invoice_2)
+
+state = Invoicexpress::Models::InvoiceState.new(
+  :state => "finalized"
+)
+@client.update_invoice_receipt_state(invoice_2.id, state)
+
 ### Simplified Invoices
 
     simple_invoices = @client.simplified_invoices
@@ -161,7 +201,7 @@ Here's some examples for the most common objects and endpoints. You could also t
         top_c = @client.top_clients
         top_d = @client.top_debtors
         quarter = @client.quarterly_results(2011)
-      
+
 ### Schedules
 
 
@@ -267,3 +307,14 @@ To update a schedule we need to pass these fields.
           ]
         )
         purchase_order = @client.create_purchase_order(purchase_order)
+
+### Sequences
+
+        sequences = @client.sequences
+        puts sequences
+
+        seq = @client.sequence 453193
+        puts seq.current_invoice_sequence_id
+        puts seq.current_simplified_invoice_sequence_id
+        puts seq.current_receipt_sequence_id
+        puts seq.current_transport_sequence_id

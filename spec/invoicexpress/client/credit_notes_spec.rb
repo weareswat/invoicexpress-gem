@@ -16,6 +16,28 @@ describe Invoicexpress::Client::CreditNotes do
     end
   end
 
+  describe ".credit_note" do
+    it "Returns credit note information" do
+      stub_get("/credit_notes/12116089.xml").
+        to_return(xml_response("credit_notes.get.xml"))
+
+      note = @client.credit_note(12116089)
+      expect(note.id).to eq 12116089
+      expect(note.saft_hash).to eq "huQb"
+    end
+
+    it "Returns currency information" do
+      stub_get("/credit_notes/12116089.xml").
+        to_return(xml_response("credit_notes.get.xml"))
+
+      note = @client.credit_note(12116089)
+
+      expect(note.multicurrency.rate).to eq 1.0804
+      expect(note.multicurrency.currency).to eq "USD"
+      expect(note.multicurrency.total).to eq 7.99
+    end
+  end
+
   describe ".create_credit_note" do
     it "creates a new credit note" do
       stub_post("/credit_notes.xml").
@@ -46,8 +68,9 @@ describe Invoicexpress::Client::CreditNotes do
       )
 
       cnote = @client.create_credit_note(cnote)
-      cnote.id.should        == 1423940
-      cnote.status           == "draft"
+
+      expect(cnote.id).to eq 1423940
+      expect(cnote.status).to eq "draft"
     end
   end
 

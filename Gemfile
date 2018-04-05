@@ -1,12 +1,14 @@
 source "https://rubygems.org"
 
-gem 'rake'
-gem 'yard'
 #  gem 'byebug'
+gemspec
 
 group :development do
+  #gem 'rake'
+  gem 'yard'
   gem 'kramdown'
   gem 'pry'
+  #gem 'libxml-ruby', '2.8.0'
 end
 
 group :test do
@@ -14,5 +16,3 @@ group :test do
   gem 'webmock'
   gem 'simplecov', :require => false
 end
-
-gemspec

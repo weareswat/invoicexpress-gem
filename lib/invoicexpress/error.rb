@@ -60,12 +60,16 @@ module Invoicexpress
   # Raised when Invoicexpress returns a 404 HTTP status code
   class NotFound < Error; end
 
-  # Raised when Invoicexpress returns a 422 HTTP status code
+  # Raised when InvoiceXpress returns a 422 HTTP status code
   class UnprocessableEntity < Error; end
 
-  # Raised when Invoicexpress server goes dark (500 HTTP status code)
+  # Raised when InvoiceXpress server goes dark (500 HTTP status code)
   class InternalServerError < Error; end
+
+  # Raised when InvoiceXpress returns a 429 HTTP status code
+  class RateLimitExceeded < Error; end
 
   # Raised when Invoicexpress server address could not be resolved
   class BadAddress < Error; end
+  
 end
