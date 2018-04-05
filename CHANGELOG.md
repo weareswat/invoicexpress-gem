@@ -1,3 +1,6 @@
+# Version 0.3.2
+Added current_invoice_receipt_number and  current_invoice_receipt_sequence_id to sequences.      
+
 # Version 0.3.1.1
 Merged changes from other contributors. Bumped version.
 

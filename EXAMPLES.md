@@ -201,7 +201,7 @@ state = Invoicexpress::Models::InvoiceState.new(
         top_c = @client.top_clients
         top_d = @client.top_debtors
         quarter = @client.quarterly_results(2011)
-      
+
 ### Schedules
 
 
@@ -307,3 +307,14 @@ To update a schedule we need to pass these fields.
           ]
         )
         purchase_order = @client.create_purchase_order(purchase_order)
+
+### Sequences
+
+        sequences = @client.sequences
+        puts sequences
+
+        seq = @client.sequence 453193
+        puts seq.current_invoice_sequence_id
+        puts seq.current_simplified_invoice_sequence_id
+        puts seq.current_receipt_sequence_id
+        puts seq.current_transport_sequence_id
